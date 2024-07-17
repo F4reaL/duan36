@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+   
+    @font-face {
+      font-family: SFU-Display;
+      font-weight: 100;
+      src: url('./assets/fonts/SFUIDISPLAY-THIN.woff') format("woff");
+    }
+    @font-face {
+      font-family: SFU-Display;
+      font-weight: 300;
+      src: url('./assets/fonts/SFUIDISPLAY-LIGHT.woff') format("woff");
+    }
+    @font-face {
+        font-family: SFU-Display;
+        font-weight: 400;
+        src: url('./assets/fonts/SFUIDISPLAY-REGULAR.woff') format("woff");
+      }
+    @font-face {
+      font-family: SFU-Display;
+      font-weight: 500;
+      src: url('./assets/fonts/SFUIDISPLAY-MEDIUM.woff') format("woff");
+    }
+    @font-face {
+      font-family: SFU-Display;
+      font-weight: 700;
+      src: url('./assets/fonts/SFUIDISPLAY-BOLD.woff') format("woff");
+    }
+    @font-face {
+      font-family: SFU-Display;
+      font-weight: 900;
+      src: url('./assets/fonts/SFUIDISPLAY-BLACK.woff') format("woff");
+    }
+    
+  }
