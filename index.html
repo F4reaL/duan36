@@ -11,8 +11,10 @@
     <header class="px-4 xl:px-[80px] 2xl:px-[174px] flex items-center justify-between ">
         <div class="flex gap-5 items-center ">
             <div class="w-[90px] h-20 relative">
-                <a href="#" class="absolute top-0 left-0 bg-white rounded-full flex items-center justify-center  p-3 pt-0.5">
+                <a href="#" class="absolute z-10 top-0 left-0 bg-white rounded-full flex items-center justify-center  p-2 pt-0.5">
                     <img src="./assets/img/logo.png" alt="Trường đại học lao động - xã hội">
+                    <div class="item-border-left"></div>
+                    <div class="item-border-right"></div>
                 </a>
             </div>
             
@@ -38,7 +40,20 @@
                 <ol class="sub-menu">
                     <li><a href="">Submenu 1</a></li>
                     <li><a href="">Submenu 2</a></li>
-                    <li><a href="">Đây là text siêu siêu dài</a></li>
+                    <li class="has-submenu-lv2">
+                        <a href="">Đây là text siêu siêu dài</a>
+                        <ol class="sub-menu-lv2">
+                            <li class="has-submenu-lv3">
+                                <a href="">Sub item</a>
+                                <ol class="sub-menu-lv3">
+                                    <li><a href="">sub item</a></li>
+                                    <li><a href="">sub item</a></li>
+                                    <li><a href="">sub item</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="">sub item</a></li>
+                        </ol>
+                    </li>
                     <li><a href="">Submenu 4</a></li>
                 </ol>
             </li>
