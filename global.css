@@ -9,10 +9,9 @@ p {
   margin-bottom: 24px;
 }
 
-
 /* Header */
 
-.item-border-left{
+.item-border-left {
   position: absolute;
   width: 54px;
   height: 8px;
@@ -21,7 +20,7 @@ p {
   left: -25px;
   top: 69%;
 }
-.item-border-right{
+.item-border-right {
   position: absolute;
   width: 54px;
   height: 8px;
@@ -102,7 +101,7 @@ p {
   align-items: center;
   gap: 8px;
 }
-.has-submenu::before{
+.has-submenu::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -145,8 +144,9 @@ p {
   border-top: none;
   padding: 12px;
   color: black;
+  background: white;
 }
-.sub-menu li:first-child{
+.sub-menu li:first-child {
   border-top: 1px solid #009dd9;
 }
 .sub-menu li a {
@@ -155,23 +155,46 @@ p {
   display: block;
 }
 
-.has-submenu-lv2, .has-submenu-lv3{
+.has-submenu-lv2,
+.has-submenu-lv3 {
   position: relative;
 }
-.has-submenu-lv2:hover .sub-menu-lv2, .has-submenu-lv3:hover .sub-menu-lv3{
+.has-submenu-lv2:hover .sub-menu-lv2,
+.has-submenu-lv3:hover .sub-menu-lv3 {
   display: block;
 }
-.sub-menu-lv2, .sub-menu-lv3{
+.sub-menu-lv2,
+.sub-menu-lv3 {
   position: absolute;
   left: 100%;
   top: 0;
   width: max-content;
   display: none;
 }
-.sub-menu-lv2 li{
-  border-left:none ;
+.sub-menu li,
+.sub-menu-lv2 li {
+  display: flex;
+  min-width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  text-transform: none;
 }
 
+.sub-menu li:hover,
+.sub-menu-lv2 li:hover {
+  background: #009dd9;
+  color: white;
+}
+.icon-menu-arrow {
+  width: 8px;
+  height: 8px;
+  background: url("./assets/img/icon-arrow-right-black.png") 100% no-repeat;
+}
+.sub-menu li:hover >.icon-menu-arrow,
+.sub-menu-lv2 li:hover >.icon-menu-arrow {
+  background: url("./assets/img/icon-arrow-right-white.png") 100% no-repeat;
+}
 /* Giới thiệu */
 .loimodau-title {
   padding: 0 30px;
