@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         "SFU-Display": ["SFU-Display", "sans-serif"],
       },
+      gridTemplateColumns:{
+        'article-detail':'1fr 300px'
+      }
     },
   },
   plugins: [],
