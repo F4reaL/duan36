@@ -15,6 +15,7 @@ module.exports = {
       },
       gridTemplateColumns:{
         'article-detail':'1fr 300px',
+        'hoidap':'1fr 380px',
         'news-list-3':'1fr minmax(754px, 1fr) 1fr',
       },
       boxShadow:{
@@ -24,6 +25,7 @@ module.exports = {
       backgroundImage:{
         'custom-gradient': 'linear-gradient(to right, #7fd5f6 0%, #d9f6fe 50%, #7fd5f6 100%)',
         'black-to-blur': 'linear-gradient(to top,  rgb(0,0,0,0.8), rgb(0,0,0,0.1) )',
+        'linear-footer': 'linear-gradient(to right, transparent, #0091c8, transparent )',
 
       }
     },
