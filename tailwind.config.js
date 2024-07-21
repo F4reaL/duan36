@@ -19,6 +19,12 @@ module.exports = {
       },
       boxShadow:{
         'video-boxshadow':'-8px 8px #ed1b24',
+        'video-boxshadow-mb':'1px 1px 2px 2px #ed1b24',
+      },
+      backgroundImage:{
+        'custom-gradient': 'linear-gradient(to right, #7fd5f6 0%, #d9f6fe 50%, #7fd5f6 100%)',
+        'black-to-blur': 'linear-gradient(to top,  rgb(0,0,0,0.8), rgb(0,0,0,0.1) )',
+
       }
     },
   },
