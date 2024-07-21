@@ -14,7 +14,11 @@ module.exports = {
         "SFU-Display": ["SFU-Display", "sans-serif"],
       },
       gridTemplateColumns:{
-        'article-detail':'1fr 300px'
+        'article-detail':'1fr 300px',
+        'news-list-3':'1fr minmax(754px, 1fr) 1fr',
+      },
+      boxShadow:{
+        'video-boxshadow':'-8px 8px #ed1b24',
       }
     },
   },

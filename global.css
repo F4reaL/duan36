@@ -3,6 +3,9 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 
 p {
   line-height: 1.4;
@@ -182,6 +185,19 @@ p {
   left: 0;
 }
 
+.sub-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  width: max-content;
+
+  border-top: none;
+  color: black;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
 .has-submenu {
   position: relative;
   display: flex;
@@ -205,25 +221,11 @@ p {
 .has-submenu:hover .sub-menu {
   visibility: visible;
   opacity: 1;
-  transition: all 0.3s ease-in-out;
 }
 
 .has-submenu img {
   height: 6px;
   width: 10px;
-}
-
-.sub-menu {
-  position: absolute;
-  top: calc(100% + 16px);
-  left: 0;
-  width: max-content;
-
-  border-top: none;
-  color: black;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1;
 }
 
 .sub-menu li {
@@ -307,6 +309,7 @@ p {
   background: white;
   transform: translateY(15px);
   position: relative;
+  font-weight: 700;
 }
 
 .loimodau-title::before {
@@ -365,4 +368,143 @@ p {
   width: 100%;
   height: 1px;
   background: #01a9f0;
+}
+
+.list-article .article-item {
+  border-bottom: 1px solid #b5eaff;
+  filter: drop-shadow(0 1px white);
+}
+.list-article .article-item:last-child {
+  border: none;
+  filter: none;
+}
+
+/* 03 Trang tin tức trang chính */
+.menu-news .menu-news-item {
+  border-bottom: 2px solid #009dd9;
+  color: #009dd9;
+  text-transform: uppercase;
+}
+.menu-news .menu-news-item.active {
+  border-bottom: 2px solid #ed1b24;
+  color: #ed1b24;
+}
+.col-right .col-right-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+  padding: 20px 0;
+  border-top: 1px solid #cae7f3;
+}
+
+@media (min-width: 1280px) {
+  .col-right .col-right-item {
+    flex-direction: row;
+  }
+  .col-right .col-right-item:first-child {
+    border: none;
+    padding-top: 0;
+  }
+}
+
+/* Custom SWiper */
+.swiper-news
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: end;
+  padding-right: 28px;
+  padding-bottom: 12px;
+}
+.swiper-news
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet {
+  background: white;
+  border: 1px solid #009dd9;
+  opacity: 1;
+}
+.swiper-news
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet-active {
+  background: #009dd9;
+}
+.swiper-ads .swiper-button-next,
+.swiper-ads .swiper-button-prev {
+  width: 32px;
+  height: 32px;
+  background: rgb(221, 221, 221, 0.7);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-ads .swiper-button-next:hover,
+.swiper-ads .swiper-button-prev:hover {
+  background: #848285;
+}
+.swiper-ads .swiper-button-next::after,
+.swiper-ads .swiper-button-prev::after {
+  content: "";
+}
+.swiper-ads .swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 980px) {
+  .swiper-ads .swiper-button-next,
+  .swiper-ads .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-ads .swiper-button-prev {
+    left: 50px;
+  }
+  .swiper-ads .swiper-button-next {
+    right: 50px;
+  }
+}
+/* Custom select box */
+
+.custom-select {
+  position: relative;
+  font-weight: 700;
+  min-width: 140px;
+}
+.custom-select option {
+  font-weight: 700;
+}
+
+.custom-select select {
+  appearance: none;
+  width: 100%;
+  font-size: 13px;
+  padding: 3px 12px;
+  background-color: #f5f6f7;
+  border: 1px solid #ccd0d5;
+  border-radius: 0.25rem;
+  color: #585c63;
+  cursor: pointer;
+  outline: none;
+}
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 30%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
 }

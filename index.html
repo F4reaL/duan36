@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trang chủ</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link href="./output.css" rel="stylesheet">
     <link href="./global.css" rel="stylesheet">
 </head>
@@ -23,9 +27,9 @@
                 <div class="text-[#00adef]">Niversity of labour and social affairs</div>
             </a>
         </div>
-        <div class="search-box  xl:w-[400px] 2xl:w-[500px] h-8 xl:h-10 border border-r-0 rounded-xl flex items-center justify-between gap-2 pl-3 xl:pl-6">
+        <div class="ml-auto search-box xl:w-[400px] 2xl:w-[500px] h-8 xl:h-10 border border-r-0 rounded-xl flex items-center justify-between gap-2 pl-3 xl:pl-6">
             <input type="text" placeholder="Từ khóa tìm kiếm" class="text-[15px] text-[#666666] outline-none border-none w-full">
-            <button class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1">
+            <button class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1 xl:w-10 xl:h-10">
                 <img src="./assets/img/icon-search.png" alt="icon search" class="h-3 w-3.5 xl:h-4 xl:w-4.5">
             </button>
         </div>
@@ -132,14 +136,60 @@
         </ol>
     </nav>
 
+    <section>
+        <div class="swiper-ads relative z-10 overflow-hidden w-full ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=""><img class="w-full object-contain" src="https://mega.com.vn/media/news/0106_hinh-nen-4k-may-tinh32.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img class="w-full object-contain" src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474077CLI/4k-wallpaper_105906912.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-button-prev"><img src="./assets/img/icon-arrow-right-black.png" alt=""></div>
+            <div class="swiper-button-next"><img src="./assets/img/icon-arrow-right-black.png" alt=""></div>
+        </div>
+    </section>
+    <div class="mt-3 flex gap-4 items-center justify-center text-white">
+        <div class="h-[60px] px-24 rounded-[60px] flex bg-[#f44e55] items-center gap-2">
+            <img src="./assets/img/icon-giangvien.png" alt="icon giang vien">
+            <div>
+                <div class="font-bold text-[18px] uppercase">Giảng viên, viên chức</div>
+                <div>Chuyên môn, Trách nhiệm, Tâm huyết</div>
+            </div>
+        </div>
+        <div class="h-[60px] px-24 rounded-[60px] flex bg-[#f44e55] items-center gap-2 relative">
+            <div class="absolute -left-[33px] w-[50px] h-[50px] rounded-full bg-[#f44e55] border-4 border-white flex justify-center items-center"><img src="./assets/img/icon-arrow-right-white2.png"  alt="icon"></div>
+            <img src="./assets/img/icon-hocsinh.png" alt="icon giang vien">
+            <div>
+                <div class="font-bold text-[18px] uppercase">Học viên, sinh viên</div>
+                <div>Năng động, Sáng tạo, Nhiệt huyết</div>
+            </div>
+        </div>
+        <div class="h-[60px] px-24 rounded-[60px] flex bg-[#f44e55] items-center gap-2 relative">
+            <div class="absolute -left-[33px] w-[50px] h-[50px] rounded-full bg-[#f44e55] border-4 border-white flex justify-center items-center"><img src="./assets/img/icon-arrow-right-white2.png"  alt="icon"></div>
+            <img src="./assets/img/icon-cuuhocsinh.png" alt="icon giang vien">
+            <div>
+                <div class="font-bold text-[18px] uppercase">Cựu sinh viên</div>
+                <div>Tự tin, Thành đạt, Thành công</div>
+            </div>
+        </div>
+    </div>
 
-    <section class="px-4 xl:px-[80px] 2xl:px-[174px] mt-10">
+    <section class="px-4 xl:px-[80px] 2xl:px-[174px] mt-16">
         <h2 class="uppercase text-[#009dd9] text-[22px] flex justify-center">
-            <span class="loimodau-title">Lời nói đầu</span>
+            <span class="loimodau-title">Khám phá trường đại học lao động - xã hội</span>
         </h2>
         <div class="loinoidau p-3 xl:p-12 border-[3px] border-[#cdf1ff] rounded-lg flex flex-col xl:flex-row items-start gap-8 xl:gap-10">
-            <img src="https://i.pinimg.com/564x/5d/83/47/5d83479fdc0b441841c9be549d8a5f81.jpg" alt="" class="max-w-[624px] w-full">
-            <div>
+            <div class="flex-1 w-full p-0.5 shadow-video-boxshadow rounded-xl">
+                <div class=" rounded-xl  overflow-hidden relative" id="video-player">
+                    <video id="video" class="w-full" controls src="./assets/img/video.mp4"></video>
+                    <div class="absolute z-20 left-2.5 bottom-2.5 icon-play inline-block bg-[#ed1a24] p-3 rounded-full"><img class="translate-x-0.5" src="./assets/img/icon-play.png" alt="icon play"></div>
+                </div>
+            </div>
+            
+            <div class="flex-1">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio at architecto necessitatibus tempore fuga dolor perferendis ad, labore nesciunt incidunt, illum facilis ipsum consequuntur cumque et explicabo molestias recusandae totam.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio at architecto necessitatibus tempore fuga dolor perferendis ad, labore nesciunt incidunt, illum facilis ipsum consequuntur cumque et explicabo molestias recusandae totam.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio at architecto necessitatibus tempore fuga dolor perferendis ad, labore nesciunt incidunt, illum facilis ipsum consequuntur cumque et explicabo molestias recusandae totam.</p>
@@ -157,112 +207,18 @@
         </div>
     </section>
 
-    <section class="lichsuhinhthanh-phattrien mt-16 px-4 xl:px-[80px] 2xl:px-[174px] py-14 bg-[#a5e6ff]">
-        <div class="title uppercase text-[34px] text-center text-[#009dd9] font-bold">Lịch sử hình thành và phát triển</div>
-        <div class="mt-2 text-center">Danh sách Sự kiện nổi bật của Trường Đại học Lao động - Xã hội</div>
-        <div class="list-event mt-7 grid xl:grid-cols-3 gap-7">
-            <div class="flex-1 flex flex-col justify-between items-center gap-2 border border-white rounded-3xl p-5 bg-[#cdf1ff]">
-                <div class="w-full">
-                    <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/a0/1f/47/a01f478f27b9327e56da30ef85e27b17.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-4 text-center block text-[18px] font-bold">Thư của Bộ trưởng Đào Ngọc Dung</a>
-                </div>
-                <a href="" class="inline-flex border-2 border-white rounded-3xl px-4 py-1.5 translate-y-10 bg-[#cdf1ff] text-[18px] text-[#009dd9] items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-blue.png" alt=""></a>
-            </div>
-            <div class="flex-1 flex flex-col justify-between items-center gap-2 border border-white rounded-3xl p-5 bg-[#cdf1ff]">
-                <div class="w-full">
-                    <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/a0/1f/47/a01f478f27b9327e56da30ef85e27b17.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-4 text-center block text-[18px] font-bold">Thư của Bộ trưởng Đào Ngọc Dung Thư của Bộ trưởng Đào Ngọc Dung Thư của Bộ trưởng Đào Ngọc Dung</a>
-                </div>
-                <a href="" class="inline-flex border-2 border-white rounded-3xl px-4 py-1.5 translate-y-10 bg-[#cdf1ff] text-[18px] text-[#009dd9] items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-blue.png" alt=""></a>
-            </div>
-            <div class="flex-1 flex flex-col justify-between items-center gap-2 border border-white rounded-3xl p-5 bg-[#cdf1ff]">
-                <div class="w-full">
-                    <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/a0/1f/47/a01f478f27b9327e56da30ef85e27b17.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-4 text-center block text-[18px] font-bold">Thư của Bộ trưởng Đào Ngọc Dung</a>
-                </div>
-                <a href="" class="inline-flex border-2 border-white rounded-3xl px-4 py-1.5 translate-y-10 bg-[#cdf1ff] text-[18px] text-[#009dd9] items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-blue.png" alt=""></a>
-            </div>
-        </div>
-    </section>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+        const swiper = new Swiper('.swiper-ads',{
+            loop: true,
+            direction: 'horizontal',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
-
-    <section class="px-4 xl:px-[80px] 2xl:px-[174px] pt-16 xl:pt-20">
-        <div class="flex justify-center">
-            <span class="doingu-title ">Đội ngũ và cơ sở vật chất</span>
-        </div>
-        <div class="list-doingu mt-9 grid xl:grid-cols-3 gap-4 xl:gap-7">
-            <div class="  rounded-3xl overflow-hidden pb-3">
-                <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/e9/32/46/e93246dce3f31187e7398cfa541e4472.jpg" alt="" class="w-full object-contain"></a>
-                <div class="mt-4 flex gap-4 justify-between items-start">
-                    <a href="" class="block text-[18px] font-bold">Thư của Bộ trưởng Đào Ngọc Dung</a>
-                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-[18px] text-white items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-                </div>
-            </div>
-            <div class="  rounded-3xl overflow-hidden pb-3">
-                <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/e9/32/46/e93246dce3f31187e7398cfa541e4472.jpg" alt="" class="w-full object-contain"></a>
-                <div class="mt-4 flex gap-4 justify-between items-start">
-                    <a href="" class="block text-[18px] font-bold">Thư của Bộ trưởng Đào Ngọc Dung Thư của Bộ trưởng Đào Ngọc Dung</a>
-                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-[18px] text-white items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-                </div>
-            </div>
-            <div class="  rounded-3xl overflow-hidden pb-3">
-                <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/e9/32/46/e93246dce3f31187e7398cfa541e4472.jpg" alt="" class="w-full object-contain"></a>
-                <div class="mt-4 flex gap-4 justify-between items-start">
-                    <a href="" class="block text-[18px] font-bold">Thư của Bộ trưởng Đào Ngọc Dung</a>
-                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-[18px] text-white items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-                </div>
-            </div>
-           
-        </div>
-    </section>
-
-    <section class="px-4 xl:px-[80px] 2xl:px-[174px] pt-20">
-        <div class="flex justify-center">
-            <span class="intro-detail-title ">Các thông tin giới thiệu chi tiết</span>
-        </div>
-        <div class="list-doingu mt-9 grid grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-7">
-            <div class="flex flex-col justify-between border-[6px] xl:border-[10px] border-[#dbf4fd] rounded-3xl p-1.5 xl:p-2.5 bg-white">
-                <div>
-                    <a href="" class="block aspect-[3/2] rounded-lg overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold">Lịch sử truyền thống</a>
-                    <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
-                    <div class="mt-3 line-clamp-3">hello</div>
-                </div>
-                <a href="" class="w-fit mb-5 mt-4 inline-flex rounded-3xl px-2.5 xl:px-4 py-1.5  bg-[#01a9f0] text-white items-center gap-2  xl:text-[18px]">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-            </div>
-            <div class="flex flex-col justify-between border-[6px] xl:border-[10px] border-[#dbf4fd] rounded-3xl p-1.5 xl:p-2.5 bg-white">
-                <div>
-                    <a href="" class="block aspect-[3/2] rounded-lg overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold"> Lịch sử truyền thống Lịch sử truyền thống</a>
-                    <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
-                    <div class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</div>
-                </div>
-                <a href="" class="w-fit mb-5 mt-4 inline-flex rounded-3xl px-2.5 xl:px-4 py-1.5  bg-[#01a9f0] text-white items-center gap-2  xl:text-[18px]">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-            </div>
-            <div class="flex flex-col justify-between border-[6px] xl:border-[10px] border-[#dbf4fd] rounded-3xl p-1.5 xl:p-2.5 bg-white">
-                <div>
-                    <a href="" class="block aspect-[3/2] rounded-lg overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold">Lịch sử truyền thống</a>
-                    <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
-                    <div class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</div>
-                </div>
-                <a href="" class="w-fit mb-5 mt-4 inline-flex rounded-3xl px-2.5 xl:px-4 py-1.5  bg-[#01a9f0] text-white items-center gap-2  xl:text-[18px]">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-            </div>
-            <div class="flex flex-col justify-between border-[6px] xl:border-[10px] border-[#dbf4fd] rounded-3xl p-1.5 xl:p-2.5 bg-white">
-                <div>
-                    <a href="" class="block aspect-[3/2] rounded-lg overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold">Lịch sử truyền thống</a>
-                    <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
-                    <div class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</div>
-                </div>
-                <a href="" class="w-fit mb-5 mt-4 inline-flex rounded-3xl px-2.5 xl:px-4 py-1.5  bg-[#01a9f0] text-white items-center gap-2  xl:text-[18px]">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
-            </div>
-           
-            
-           
-        </div>
-    </section>
-
-    <script src="./main.js"></script>
+        })
+    </script>
 </body>
 </html>
