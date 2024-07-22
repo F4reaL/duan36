@@ -579,3 +579,51 @@ p {
   border-top: var(--size) solid black;
   top: 55%;
 }
+
+
+/* Trang hỏi đáp */
+.question-item{
+  transition: all 0.2s ease-in-out;
+  box-shadow: 1px 1px 4px 1px rgb(235, 234, 234);
+
+}
+.question-item:first-child{
+  border: 1px solid #ffbbbe;
+}
+.question-item:nth-child(even){
+  background: #e7f8ff;
+  border:1px solid white;
+}
+.question-item:hover{
+  box-shadow: 1px 1px 4px 2px rgb(230, 228, 228);
+  transform: translateX(-1px) translateY(-1px);
+}
+.question-title{
+  font-weight: 700;
+  margin-top: 20px;
+}
+.question-item:first-child .question-title{
+  color:#ed1b24
+}
+.question-content{
+  margin-top: 20px;
+}
+.question-seemore{
+  color: #009dd9;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.question-seemore .icon-arrow{
+  width: 6px;
+  height: 9px;
+  background: url(./assets/img/icon-arrow-right-blue.png);
+}
+.question-item:first-child .question-seemore{
+  color:#ed1b24
+}
+.question-item:first-child .question-seemore .icon-arrow{
+  background: url(./assets/img/icon-arrow-right-red.png);
+
+}
