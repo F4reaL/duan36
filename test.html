@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px; /* khoảng cách giữa các cột */
+            grid-auto-rows: minmax(100px, auto); /* chiều cao mặc định của các hàng */
+        }
+
+        .grid-item {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            height: 100px;
+        }
+
+        .grid-item:nth-child(4) {
+            height: 300px; /* Chiều cao của cột thứ 4 lớn hơn các cột khác */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </div>
+</body>
+</html>

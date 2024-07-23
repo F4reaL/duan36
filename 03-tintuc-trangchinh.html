@@ -8,7 +8,130 @@
     <link href="./global.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="breadscrum px-2 xl:px-[80px] 2xl:px-[174px] flex gap-5 xl:gap-6 py-3 bg-[#f5f5f5] text-xs xl:text-[15px]">
+    <header class="px-2 xl:px-[80px] 2xl:px-[174px] flex items-center justify-between ">
+        <div class="flex gap-5 items-center ">
+            <div class="w-[90px] h-20 relative">
+                <a href="#" class="absolute z-10 top-0 left-0 bg-white rounded-full flex items-center justify-center  p-2 pt-0.5">
+                    <img src="./assets/img/logo.png" alt="Trường đại học lao động - xã hội">
+                    <div class="item-border-left"></div>
+                    <div class="item-border-right"></div>
+                </a>
+            </div>
+            
+            <a href="#" class="hidden xl:block uppercase">
+                <h1 class="text-[#ed1b24] text-[22px]">Trường đại học lao động - xã hội</h1>
+                <div class="text-[#00adef]">Niversity of labour and social affairs</div>
+            </a>
+        </div>
+        <div class="ml-auto search-box xl:w-[400px] 2xl:w-[500px] h-8 xl:h-10 border border-r-0 rounded-xl flex items-center justify-between gap-2 pl-3 xl:pl-6">
+            <input type="text" placeholder="Từ khóa tìm kiếm" class="text-[15px] text-[#666666] outline-none border-none w-full">
+            <button class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1 xl:w-10 xl:h-10">
+                <img src="./assets/img/icon-search.png" alt="icon search" class="h-3 w-3.5 xl:h-4 xl:w-4.5">
+            </button>
+        </div>
+        <div class=" ml-3 flex flex-col items-center justify-center xl:hidden bg-[#009dd9] rounded-full "id="humberger" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mb-sidebar " id="mb-sidebar">
+            <ol class="text-white w-full">
+                <li><a href="">Menu item1</a></li>
+                <li><a href="">Menu item2</a></li>
+                <li><a href="">Menu item3</a></li>
+                <li><a href="">Menu item4</a></li>
+                <li><a href="">Menu item5</a></li>
+            </ol>
+        </div>
+
+    </header>
+
+    <nav class="px-4 xl:px-[80px] 2xl:px-[174px] py-4 bg-[#009dd9]">
+        <ol class="hidden xl:flex ml-[120px] mega-menu  items-center justify-between ">
+            <li><a href="">Trang chủ</a></li>
+            <li class="active has-submenu">
+                <a href="">Giới thiệu</a>
+                <img src="./assets/img/icon-arrow-down.png" alt="icon arrow down" >
+                <ol class="sub-menu">
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li class="has-submenu-lv2">
+                        <a href="">Đây là text siêu siêu dài</a>
+                        <span class="icon-menu-arrow"></span>
+
+                        <ol class="sub-menu-lv2">
+                            <li class="has-submenu-lv3">
+                                <a href="">Sub item</a>
+                                <span class="icon-menu-arrow"></span>
+                                <ol class="sub-menu-lv3">
+                                    <li><a href="">sub item</a></li>
+                                    <li><a href="">sub item</a></li>
+                                    <li><a href="">sub item</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="">sub item</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="">Submenu 4</a></li>
+                </ol>
+            </li>
+            <li><a href="">Tuyển sinh</a></li>
+            <li class="has-submenu">
+                <a href="">Đào tạo</a>
+                <img src="./assets/img/icon-arrow-down.png" alt="icon arrow down" >
+                <ol class="sub-menu">
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li><a href="">Đây là text siêu siêu dài</a></li>
+                    <li><a href="">Submenu 4</a></li>
+                </ol>
+            </li>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Sự kiện</a></li>
+            <li class="has-submenu">
+                <a href="">Đơn vị thuộc trường</a>
+                <img src="./assets/img/icon-arrow-down.png" alt="icon arrow down">
+                <ol class="sub-menu">
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li><a href="">Đây là text siêu siêu dài</a></li>
+                    <li><a href="">Submenu 4</a></li>
+                </ol>
+            </li>
+            <li class="has-submenu">
+                <a href="">Ba công khai</a>
+                <img src="./assets/img/icon-arrow-down.png" alt="icon arrow down">
+                <ol class="sub-menu">
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li><a href="">Đây là text siêu siêu dài</a></li>
+                    <li><a href="">Submenu 4</a></li>
+                </ol>
+            </li>
+            <li class="has-submenu">
+                <a href="">Thư viện</a>
+                <img src="./assets/img/icon-arrow-down.png" alt="icon arrow down">
+                <ol class="sub-menu">
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li><a href="">Đây là text siêu siêu dài</a></li>
+                    <li><a href="">Submenu 4</a></li>
+                </ol>
+            </li>
+            <li class="has-submenu">
+                <a href="">Khác</a>
+                <img src="./assets/img/icon-arrow-down.png" alt="icon arrow down">
+                <ol class="sub-menu">
+                    <li><a href="">Submenu 1</a></li>
+                    <li><a href="">Submenu 2</a></li>
+                    <li><a href="">Đây là text siêu siêu dài</a></li>
+                    <li><a href="">Submenu 4</a></li>
+                </ol>
+            </li>
+            <li><a href="">Liên hệ</a></li>
+        </ol>
+    </nav>
+    <div class="breadscrum px-2 xl:px-[80px] 2xl:px-[174px] flex gap-5 xl:gap-6 py-3 xl:bg-[#f5f5f5] text-xs xl:text-[15px]">
         <a href="" class="flex items-center hover:text-[#009dd9]">
           <img src="./assets/img/icon-home.png" alt="icon home" />
           <span class="ml-2.5">Trang chủ</span>
@@ -28,7 +151,7 @@
             <div class="flex flex-col justify-between rounded-3xl ">
                 <div>
                     <a href="" class="block aspect-[3/2] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3  block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                     <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                     <a href="" class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                 </div>
@@ -38,7 +161,7 @@
             <div class="flex flex-col justify-between rounded-3xl ">
                 <div>
                     <a href="" class="block aspect-[3/2] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3  block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                     <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                     <a href="" class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                 </div>
@@ -48,7 +171,7 @@
             <div class="flex flex-col justify-between rounded-3xl ">
                 <div>
                     <a href="" class="block aspect-[3/2] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thốngLịch sử truyền thốngLịch sử truyền thống</a>
+                    <a href="" class="mt-3  block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thốngLịch sử truyền thốngLịch sử truyền thống</a>
                     <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                     <a href="" class="mt-3 line-clamp-3">helooo.</a>
                 </div>
@@ -58,7 +181,7 @@
             <div class="flex flex-col justify-between rounded-3xl ">
                 <div>
                     <a href="" class="block aspect-[3/2] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3  block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                     <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                     <a href="" class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                 </div>
@@ -80,7 +203,7 @@
             <div class="flex flex-col justify-between rounded-3xl mb-5 xl:mb-0">
                 <div>
                     <a href="" class="block aspect-[3/2] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3  block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3  block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                     <div class="mt-3.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                     <a href="" class="mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                 </div>
@@ -90,7 +213,7 @@
                 <div class="col-right-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
                     <div>
-                        <a href="" class=" block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                        <a href="" class=" block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                         <div class="mt-2.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                         <a href="" class="mt-2.5 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                     </div>
@@ -98,7 +221,7 @@
                 <div class="col-right-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
                     <div>
-                        <a href="" class=" block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                        <a href="" class=" block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                         <div class="mt-2.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                         <a href="" class="mt-2.5 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                     </div>
@@ -106,7 +229,7 @@
                 <div class="col-right-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
                     <div>
-                        <a href="" class=" block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                        <a href="" class=" block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                         <div class="mt-2.5 flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                         <a href="" class="mt-2.5 line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                     </div>
@@ -128,17 +251,17 @@
             <div class="col-around flex flex-col gap-6">
                 <div class="col-around-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3.5 block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3.5 block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                 </div>
                 <div class="col-around-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3.5 block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3.5 block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                 </div>
             </div>
             <div class="flex flex-col justify-between rounded-3xl ">
                 <div>
                     <a href="" class="block aspect-[3/2] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3 block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3 block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                     <div class="mt-3.5 hidden xl:flex gap-1 items-center text-[15px] text-[#666666]"><img src="./assets/img/icon-cal.png" class="w-3.5 h-3.5" alt=""><span>17/07/2024</span></div>
                     <a href="" class="hidden mt-3 xl:line-clamp-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas atque delectus enim dignissimos ex officiis, voluptatibus magni eaque? Voluptas similique quia reprehenderit temporibus inventore dicta commodi. Non exercitationem quibusdam nesciunt!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam quae, molestiae cum sequi odit facere ex error fugit obcaecati. Saepe dolorum accusamus odio quia cum laboriosam, molestiae voluptates beatae.</a>
                 </div>
@@ -147,11 +270,11 @@
             <div class="col-around flex flex-col gap-6">
                 <div class="col-around-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3.5 block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3.5 block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                 </div>
                 <div class="col-around-item">
                     <a href="" class="shrink-0 w-full xl:max-w-[250px] block aspect-[5/3] rounded-xl overflow-hidden"><img src="https://i.pinimg.com/236x/ee/4f/a2/ee4fa29bd9f0dd5426e18cdee12e9eaf.jpg" alt="" class="w-full object-contain"></a>
-                    <a href="" class="mt-3.5 block text-[18px] font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
+                    <a href="" class="mt-3.5 block text-lg font-bold hover:text-[#009dd9]">Lịch sử truyền thống</a>
                 </div>
             </div>
         </div>

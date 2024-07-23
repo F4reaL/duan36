@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "SFU-Display": ["SFU-Display", "sans-serif"],
+        "Google-Sans": ["Google-Sans", "sans-serif"],
       },
       gridTemplateColumns:{
         'article-detail':'1fr 300px',

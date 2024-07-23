@@ -627,3 +627,9 @@ p {
   background: url(./assets/img/icon-arrow-right-red.png);
 
 }
+
+/* Trang cảm ơn */
+.thankyou{
+  height: calc(100vh - 134px);
+  overflow: hidden;
+}
