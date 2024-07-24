@@ -41,12 +41,27 @@
             <span></span>
         </div>
         <div class="mb-sidebar " id="mb-sidebar">
-            <ol class="text-white w-full">
+            <ol class="text-white w-full flex flex-col gap-2">
                 <li><a href="">Menu item1</a></li>
                 <li><a href="">Menu item2</a></li>
                 <li><a href="">Menu item3</a></li>
-                <li><a href="">Menu item4</a></li>
-                <li><a href="">Menu item5</a></li>
+                <li>
+                    <div class="" aria-controls="dropdown-tintuc" data-collapse-toggle="dropdown-tintuc" >
+                        <div class="flex gap-2 items-center  cursor-pointer "><span>Tin tức</span> <img class="w-1 rotate-90" src="./assets/img/icon-arrow-right-white2.png" alt=""></div>
+                        <ul id="dropdown-tintuc" class="hidden py-1 px-4 ">
+                            <li>
+                            <a href="#" class="">Tin tức nhà trường</a>
+                            </li>
+                            <li>
+                            <a href="#" class="">Billing</a>
+                            </li>
+                            <li>
+                            <a href="#" class="">Invoice</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Tin tức 5</a></li>
             </ol>
         </div>
 
@@ -591,7 +606,7 @@
         <a href="" class="my-5 block py-2 rounded-xs   bg-[#e62626] text-center text-white font-bold text-lg">Gửi yêu cầu </a>
     </div>
 
-    <div class="inline-flex w-fit flex-col gap-3 fixed right-5 bottom-2 z-[10]">
+    <div class="inline-flex w-fit flex-col gap-3 fixed right-5 bottom-2 z-[1000]">
         <button data-modal-target="default-modal" data-modal-toggle="default-modal"><img src="./assets/img/icon-hotrotuyendung.png" alt=""></button>
         <button><img src="./assets/img/icon-hotrotuyendung.png" alt=""></button>
         <button><img src="./assets/img/icon-hotrotuyendung.png" alt=""></button>
@@ -601,28 +616,35 @@
 
   
   <!-- Main modal -->
-  <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden bg-[rgb(0,0,0,0.1)] fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 max-h-full">
+  <div id="default-modal" tabindex="-1" aria-hidden="true" class="h-full overflow-scroll hidden bg-[rgb(0,0,0,0.1)] fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 max-h-full">
           <!-- Modal content -->
-          <div class="xl:absolute   xl:-bottom-3 right-6 z-[100] p-4 xl:p-0 overflow-scroll h-2/3">
-            <div class="flex items-center justify-between bg-red-600 uppercase text-white absolute -top-8 right-3 text-sm pl-6 rounded-tl-3xl">
-                <span class="-translate-y-1">Đăng ký tư vấn tuyển sinh</span>
-                <img class="translate-x-5 relative z-30"  src="./assets/img/icon-hotrotuyendung.png" alt="">
-            </div>
-            <div class="w-full max-w-[400px] bg-white border-4 border-red-600 rounded-xl p-6 relative z-20">
-                <div class="uppercase text-center font-semibold text-red-600">Chi tiết thông tin tuyển sinh</div>
-                <div class="mt-4">
+          <div class="xl:absolute xl:-bottom-0 right-6 z-[100] p-4 xl:p-0">
+            
+            <div class="w-full max-w-[400px] bg-white border-4 border-red-600 rounded-xl p-6 pb-0 relative z-20">
+                <div class="h-[34px] xl:h-auto flex items-center justify-between bg-red-600 uppercase text-white absolute -top-9 xl:-top-12 right-3 text-sm pl-6 rounded-tl-3xl">
+                    <span class="">Đăng ký tư vấn tuyển sinh</span>
+                    <img class="translate-x-5 relative z-30 scale-75 xl:scale-100"  src="./assets/img/icon-hotrotuyendung.png" alt="">
+                </div>
+                <button type="button" class="2xl:hidden absolute top-0.5 right-1 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="mt-2 xl:mt-0 uppercase text-center font-semibold text-red-600">Chi tiết thông tin tuyển sinh</div>
+                <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="name">Họ và tên *</label>
                     <input id="name" name="name" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="Nguyễn Văn A" required>
                 </div>
-                <div class="mt-4">
+                <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="email">Email *</label>
                     <input id="email" name="email" class=" h-10 border rounded-sm p-3 w-full outline-none" type="email" placeholder="Example@gmail.com" required>
                 </div>
-                <div class="mt-4">
+                <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="phoneNumber">Số điện thoại *</label>
                     <input id="phoneNumber" name="phoneNumber" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="0125464885" required>
                 </div>
-                <div class="mt-4">
+                <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="optionMajor">Ngành nghề quan tâm </label>
                     <select id="optionMajor" name="optionMajor" class=" h-10 border rounded-sm px-3 w-full outline-none">
                         <option value="1">Công nghệ thông tin</option>
@@ -632,14 +654,14 @@
                 </div>
                
                 
-                <div class="mt-4">
+                <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="supportinfo">Thông tin cần tư vấn *</label>
                     <div class="overflow-hidden mt-2 w-full rounded-sm border flex gap-2 bg-white">
-                        <div class="py-3 w-full px-2"><textarea name="supportinfo" id="supportinfo" class=" w-full !outline-none border-none" placeholder="Nội dung câu hỏi " rows="4"></textarea></div>
+                        <div class="py-3 w-full px-2"><textarea name="supportinfo" id="supportinfo" class=" w-full !outline-none border-none" placeholder="Nội dung câu hỏi " rows="3"></textarea></div>
                     </div>
                 </div>
                 
-                <div class="mt-4">
+                <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="securityKey">Mã bảo mật *</label>
                     <div class=" w-full  rounded-sm border flex justify-between px-3 gap-4 bg-white">
                         <input id="securityKey" name="securityKey" class="w-full h-10 outline-none" type="text" placeholder="Nhập mã bảo mật" required>

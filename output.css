@@ -797,6 +797,38 @@ video {
   top: 0.125rem;
 }
 
+.-top-4 {
+  top: -1rem;
+}
+
+.-top-6 {
+  top: -1.5rem;
+}
+
+.-top-10 {
+  top: -2.5rem;
+}
+
+.-top-9 {
+  top: -2.25rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-1\.5 {
+  top: 0.375rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -835,6 +867,10 @@ video {
 
 .z-\[10\] {
   z-index: 10;
+}
+
+.z-\[1000\] {
+  z-index: 1000;
 }
 
 .float-start {
@@ -1002,6 +1038,10 @@ video {
 
 .mt-\[52px\] {
   margin-top: 52px;
+}
+
+.ms-auto {
+  margin-inline-start: auto;
 }
 
 .box-border {
@@ -1189,12 +1229,16 @@ video {
   height: 50px;
 }
 
+.h-\[calc\(100\%-1rem\)\] {
+  height: calc(100% - 1rem);
+}
+
 .h-full {
   height: 100%;
 }
 
-.h-2\/3 {
-  height: 66.666667%;
+.h-\[34px\] {
+  height: 34px;
 }
 
 .max-h-full {
@@ -1379,6 +1423,11 @@ video {
 
 .translate-y-10 {
   --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-2 {
+  --tw-translate-y: 0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2632,6 +2681,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-custom-gradient {
   background-image: linear-gradient(to right, #7fd5f6 0%, #d9f6fe 50%, #7fd5f6 100%);
 }
@@ -2774,6 +2827,10 @@ video {
   padding: 0.75rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -2784,10 +2841,6 @@ video {
 
 .p-7 {
   padding: 1.75rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .px-1 {
@@ -2888,6 +2941,10 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pb-3 {
@@ -3238,6 +3295,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3692,6 +3754,11 @@ video {
   background-color: rgb(0 157 217 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -3709,6 +3776,11 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -3764,6 +3836,18 @@ video {
 
   .xl\:-bottom-3 {
     bottom: -0.75rem;
+  }
+
+  .xl\:-top-8 {
+    top: -2rem;
+  }
+
+  .xl\:-top-12 {
+    top: -3rem;
+  }
+
+  .xl\:-bottom-0 {
+    bottom: -0px;
   }
 
   .xl\:mx-\[80px\] {
@@ -3844,6 +3928,10 @@ video {
 
   .xl\:h-\[60px\] {
     height: 60px;
+  }
+
+  .xl\:h-auto {
+    height: auto;
   }
 
   .xl\:w-10 {
@@ -3985,6 +4073,10 @@ video {
     background-image: linear-gradient(to top,  rgb(0,0,0,0.8), rgb(0,0,0,0.1) );
   }
 
+  .xl\:p-0 {
+    padding: 0px;
+  }
+
   .xl\:p-0\.5 {
     padding: 0.125rem;
   }
@@ -3999,10 +4091,6 @@ video {
 
   .xl\:p-3 {
     padding: 0.75rem;
-  }
-
-  .xl\:p-0 {
-    padding: 0px;
   }
 
   .xl\:px-20 {
@@ -4153,6 +4241,10 @@ video {
     margin-right: 174px;
   }
 
+  .\32xl\:hidden {
+    display: none;
+  }
+
   .\32xl\:w-\[500px\] {
     width: 500px;
   }
@@ -4173,6 +4265,16 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:hover\:bg-gray-600:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  }
+
+  .dark\:hover\:text-white:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
   @media (min-width: 1024px) {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
