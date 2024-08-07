@@ -8,7 +8,7 @@
     <link href="./global.css" rel="stylesheet">
 </head>
 <body>
-    <header class="px-2 xl:px-[80px] 2xl:px-[174px] flex items-center justify-between ">
+    <header class="sticky z-[1000] w-full top-0 bg-white px-2 xl:px-[80px] 2xl:px-[174px] flex items-center justify-between ">
         <div class="flex gap-5 items-center ">
             <div class="w-[90px] h-20 relative">
                 <a href="#" class="absolute z-10 top-0 left-0 bg-white rounded-full flex items-center justify-center  p-2 pt-0.5">
@@ -23,11 +23,11 @@
                 <div class="text-[#00adef]">Niversity of labour and social affairs</div>
             </a>
         </div>
-        <div class="ml-auto search-box xl:w-[400px] 2xl:w-[500px] h-8 xl:h-10 border border-r-0 rounded-xl flex items-center justify-between gap-2 pl-3 xl:pl-6">
+        <div class="ml-auto search-box xl:w-[400px] 2xl:w-[500px] h-8 xl:h-10 border border-r-0 rounded-xl flex items-center justify-between gap-2 p-0.5 pl-3 xl:pl-6">
             <input type="text" placeholder="Từ khóa tìm kiếm" class="text-[15px] text-[#666666] outline-none border-none w-full">
-            <button class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1 xl:w-10 xl:h-10">
+            <a href="" class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1 xl:w-10 xl:h-10">
                 <img src="./assets/img/icon-search.png" alt="icon search" class="h-3 w-3.5 xl:h-4 xl:w-4.5">
-            </button>
+            </a>
         </div>
         <div class=" ml-3 flex flex-col items-center justify-center xl:hidden bg-[#009dd9] rounded-full "id="humberger" >
             <span></span>
@@ -46,7 +46,7 @@
 
     </header>
 
-    <nav class="px-4 xl:px-[80px] 2xl:px-[174px] py-4 bg-[#009dd9]">
+    <nav class="sticky z-[999] w-full top-20 px-4 xl:px-[80px] 2xl:px-[174px] py-4 bg-[#009dd9]">
         <ol class="hidden xl:flex ml-[120px] mega-menu  items-center justify-between ">
             <li><a href="">Trang chủ</a></li>
             <li class="active has-submenu">
@@ -157,7 +157,7 @@
         </div>
     </section>
 
-    <section class="lichsuhinhthanh-phattrien mt-16 px-4 xl:px-[80px] 2xl:px-[174px] py-14 bg-[#a5e6ff]">
+    <section class="lichsuhinhthanh-phattrien mt-16 px-4 xl:px-[80px] 2xl:px-[174px] pt-14 pb-20 bg-[#a5e6ff]">
         <div class="title uppercase text-[34px] text-center text-[#009dd9] font-bold">Lịch sử hình thành và phát triển</div>
         <div class="mt-2 text-center">Danh sách Sự kiện nổi bật của Trường Đại học Lao động - Xã hội</div>
         <div class="list-event mt-7 grid xl:grid-cols-3 gap-10 xl:gap-7">
@@ -195,21 +195,21 @@
                 <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/e9/32/46/e93246dce3f31187e7398cfa541e4472.jpg" alt="" class="w-full object-contain"></a>
                 <div class="mt-4 flex gap-4 justify-between items-start">
                     <a href="" class="block text-lg font-bold">Thư của Bộ trưởng Đào Ngọc Dung</a>
-                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-lg text-white items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
+                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-lg text-white items-center gap-2 button-seemore-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
                 </div>
             </div>
             <div class="  rounded-3xl overflow-hidden pb-3">
                 <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/e9/32/46/e93246dce3f31187e7398cfa541e4472.jpg" alt="" class="w-full object-contain"></a>
                 <div class="mt-4 flex gap-4 justify-between items-start">
                     <a href="" class="block text-lg font-bold">Thư của Bộ trưởng Đào Ngọc Dung Thư của Bộ trưởng Đào Ngọc Dung</a>
-                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-lg text-white items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
+                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-lg text-white items-center gap-2 button-seemore-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
                 </div>
             </div>
             <div class="  rounded-3xl overflow-hidden pb-3">
                 <a href="" class="block aspect-[3/2] rounded-3xl overflow-hidden"><img src="https://i.pinimg.com/236x/e9/32/46/e93246dce3f31187e7398cfa541e4472.jpg" alt="" class="w-full object-contain"></a>
                 <div class="mt-4 flex gap-4 justify-between items-start">
                     <a href="" class="block text-lg font-bold">Thư của Bộ trưởng Đào Ngọc Dung</a>
-                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-lg text-white items-center gap-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
+                    <a href="" class="inline-flex shrink-0 rounded-3xl px-4 py-1.5  bg-[#01a9f0] text-lg text-white items-center gap-2 button-seemore-2">Xem thêm <img src="./assets/img/icon-arrow-right-white.png" alt=""></a>
                 </div>
             </div>
            

@@ -40,16 +40,3 @@ try {
 } catch (error) {}
 
 
-const videoPlayer = document.getElementById('video-player')
-const video = document.getElementById('video')
-const iconPlay = document.getElementById('icon-play')
-try {
-
-  videoPlayer.addEventListener('click', function(){
-    iconPlay.style.display="none";
-    // video.play()
-    video.setAttribute('controls','true')
-  })
-} catch (error) {
-  
-}

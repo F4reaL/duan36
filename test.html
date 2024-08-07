@@ -3,33 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Example</title>
+    <title>YouTube iFrame Play Button</title>
     <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px; /* khoảng cách giữa các cột */
-            grid-auto-rows: minmax(100px, auto); /* chiều cao mặc định của các hàng */
-        }
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
-        .grid-item {
-            background-color: lightblue;
-            padding: 20px;
-            text-align: center;
-            height: 100px;
-        }
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
 
-        .grid-item:nth-child(4) {
-            height: 300px; /* Chiều cao của cột thứ 4 lớn hơn các cột khác */
-        }
+iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.play-button {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Ẩn nút khi không di chuột */
+}
+
+.video-container:hover .play-button {
+    display: block; /* Hiển thị nút khi di chuột qua */
+}
+.ytp-large-play-button.ytp-button.ytp-large-play-button-red-bg{
+    display: none !important;
+}
+.ytp-embed:not(.ad-showing) .ytp-title-text{
+    display: none;
+}
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
+    <div class="video-container">
+        <iframe id="youtubeIframe" src="https://www.youtube.com/embed/th6vk1C4INQ?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button id="playButton" class="play-button">▶</button>
     </div>
+
+    <script>document.addEventListener('DOMContentLoaded', () => {
+        const playButton = document.getElementById('playButton');
+        const iframe = document.getElementById('youtubeIframe');
+    
+        playButton.addEventListener('click', () => {
+            // Gửi lệnh phát video đến iframe
+            const player = new YT.Player(iframe);
+            player.playVideo();
+        });
+    });
+    
+    // Tải API YouTube
+    function loadYouTubeAPI() {
+        const script = document.createElement('script');
+        script.src = 'https://www.youtube.com/embed/th6vk1C4INQ';
+        document.body.appendChild(script);
+    }
+    
+    loadYouTubeAPI();
+    </script>
 </body>
 </html>
