@@ -8,30 +8,14 @@ body {
   width: 0;
 }
 /* do not group these rules */
-*::-webkit-input-placeholder {
-  color: red;
+input::placeholder {
+  color: #000; /* Thay đổi màu placeholder */
+  opacity: 1; /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
 }
-*:-moz-placeholder {
-  /* FF 4-18 */
-  color: red;
-  opacity: 1;
-}
-*::-moz-placeholder {
-  /* FF 19+ */
-  color: red;
-  opacity: 1;
-}
-*:-ms-input-placeholder {
-  /* IE 10+ */
-  color: red;
-}
-*::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: red;
-}
-*::placeholder {
-  /* modern browser */
-  color: red;
+
+textarea::placeholder {
+  color: #000; /* Thay đổi màu placeholder cho textarea nếu cần */
+  opacity: 1; /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
 }
 p {
   line-height: 1.4;
@@ -39,7 +23,7 @@ p {
 }
 .btn-footer:hover{
   cursor: pointer;
-  filter: brightness(0.9);
+  filter: brightness(1.1);
 }
 .btn-tuvan{
   background: none;
