@@ -41,6 +41,27 @@ p {
   cursor: pointer;
   filter: brightness(0.9);
 }
+.btn-tuvan{
+  background: none;
+}
+.btn-tuvan:hover{
+  background: #dc2626;
+}
+.btn-tuvan span{
+  transition: all 0.1s ease-in;
+  width: 0;
+  opacity: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+.btn-tuvan:hover span{
+  width: auto;
+  opacity: 1;
+  height: auto;
+  color:white;
+  display: block;
+}
 
 /* inline-flex rounded-3xl px-4 py-1.5 -translate-y-5 bg-[#cdf1ff] text-lg text-[#009dd9] items-center gap-2 */
 .button-seemore-1 {
