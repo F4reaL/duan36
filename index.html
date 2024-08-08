@@ -117,7 +117,6 @@
 
         // Lấy ra danh sách các swiper của ngành đào tạo
         const nganhdaotaoSwiperList = document.querySelectorAll('.swiper-nganhdaotao')
-        console.log(':::::', nganhdaotaoSwiperList[1]);
         // Gán sự kiện click cho các nút phân trang tùy chỉnh
         var paginationButtons = document.querySelectorAll('#custom-pagination .custom-pagination-button');
         paginationButtons.forEach(function(button) {
@@ -142,9 +141,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const videoPlayer = document.getElementById('video-player')
-            const iconPlay = document.getElementById('icon-play')
+            const videoIframe = document.getElementById('video-iframe')
+            const iframeThumb = document.getElementById('iframe-thumb')
             videoPlayer.addEventListener('click', function(){
-                iconPlay.style.display="none";
+                iframeThumb.style.display="none";
+                videoIframe.src = videoIframe.getAttribute('data-src') + "?autoplay=1"
             })
         })
         
@@ -391,15 +392,14 @@
             <div class="flex-1 w-full xl:p-0.5 shadow-video-boxshadow-mb xl:shadow-video-boxshadow rounded-xl">
 
                 <div class="video-container" id="video-player">
-                    <iframe src="https://www.youtube.com/embed/th6vk1C4INQ" frameborder="0" allowfullscreen></iframe>
-                    <div id="icon-play" class="absolute z-20 left-2.5 bottom-2.5 icon-play inline-block bg-[#ed1a24] p-3 rounded-full"><img class="translate-x-0.5" src="./assets/img/icon-play.png" alt="icon play"></div>
+                    <iframe id="video-iframe" src="about:blank" data-src="https://www.youtube.com/embed/th6vk1C4INQ" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                    <div class="absolute inset-0 bg-[#00000079] z-10 cursor-pointer" id="iframe-thumb">
+                        <img class="w-full object-cover" src="https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-thien-nhien-3d-002.jpg" alt="ảnh thumb">
+                        <div id="icon-play" class="absolute z-20 left-2.5 bottom-2.5 icon-play inline-block bg-[#ed1a24] p-3 rounded-full"><img class="translate-x-0.5" src="./assets/img/icon-play.png" alt="icon play"></div>
+                    </div>
                 </div>
 
-                <!-- <div class=" rounded-xl  overflow-hidden relative" id="video-player">
-                    
-                    <iframe src="https://www.youtube.com/embed/th6vk1C4INQ" width="100%"  frameborder="0"></iframe>
-                    <div id="icon-play" class="absolute z-20 left-2.5 bottom-2.5 icon-play inline-block bg-[#ed1a24] p-3 rounded-full"><img class="translate-x-0.5" src="./assets/img/icon-play.png" alt="icon play"></div>
-                </div> -->
+               
             </div>
             
             <div class="flex-1">

@@ -1,83 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube iFrame Play Button</title>
+    <title>Thumbnail và Iframe YouTube</title>
     <style>
-        body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
+        #iframe-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Tỉ lệ 16:9 */
+            overflow: hidden;
+            background: url('thumbnail.jpg') no-repeat center center;
+            background-size: cover;
+            cursor: pointer;
+        }
 
-.video-container {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-}
+        #iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: none;
+        }
 
-iframe {
-    width: 100%;
-    height: 450px;
-}
+        #iframe-container.show-iframe {
+            background: none;
+        }
 
-.play-button {
-    position: absolute;
-    top: 80%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    cursor: pointer;
-    display: none; /* Ẩn nút khi không di chuột */
-}
-
-.video-container:hover .play-button {
-    display: block; /* Hiển thị nút khi di chuột qua */
-}
-.ytp-large-play-button.ytp-button.ytp-large-play-button-red-bg{
-    display: none !important;
-}
-.ytp-embed:not(.ad-showing) .ytp-title-text{
-    display: none;
-}
+        /* Tùy chọn: Hiển thị cursor pointer để người dùng biết có thể nhấp vào thumbnail */
+        #iframe-container:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <iframe id="youtubeIframe" src="https://www.youtube.com/embed/th6vk1C4INQ?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <button id="playButton" class="play-button">▶</button>
+    <div id="iframe-container">
+        <iframe id="my-iframe" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <script>document.addEventListener('DOMContentLoaded', () => {
-        const playButton = document.getElementById('playButton');
-        const iframe = document.getElementById('youtubeIframe');
-    
-        playButton.addEventListener('click', () => {
-            // Gửi lệnh phát video đến iframe
-            const player = new YT.Player(iframe);
-            player.playVideo();
+    <script>
+        document.getElementById('iframe-container').addEventListener('click', function() {
+            var iframe = document.getElementById('my-iframe');
+            // Cập nhật src của iframe để bắt đầu phát video YouTube
+            iframe.src = 'https://www.youtube.com/embed/th6vk1C4INQ?autoplay=1'; // Thay VIDEO_ID bằng ID của video YouTube bạn muốn phát
+
+            // Hiển thị iframe và ẩn thumbnail
+            this.classList.add('show-iframe');
         });
-    });
-    
-    // Tải API YouTube
-    function loadYouTubeAPI() {
-        const script = document.createElement('script');
-        script.src = 'https://www.youtube.com/embed/th6vk1C4INQ';
-        document.body.appendChild(script);
-    }
-    
-    loadYouTubeAPI();
     </script>
 </body>
 </html>

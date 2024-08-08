@@ -6,6 +6,19 @@
     <title>10</title>
     <link href="./output.css" rel="stylesheet">
     <link href="./global.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoPlayer = document.getElementById('video-player')
+            const videoIframe = document.getElementById('video-iframe')
+            const iframeThumb = document.getElementById('iframe-thumb')
+            videoPlayer.addEventListener('click', function(){
+                iframeThumb.style.display="none";
+                videoIframe.src = videoIframe.getAttribute('data-src') + "?autoplay=1"
+            })
+        })
+        
+       
+    </script>
 </head>
 <body>
     <header class="px-2 xl:px-[80px] 2xl:px-[174px] flex items-center justify-between ">
@@ -25,9 +38,9 @@
         </div>
         <div class="ml-auto search-box xl:w-[400px] 2xl:w-[500px] h-8 xl:h-10 border border-r-0 rounded-xl flex items-center justify-between gap-2 pl-3 xl:pl-6">
             <input type="text" placeholder="Từ khóa tìm kiếm" class="text-[15px] text-[#666666] outline-none border-none w-full">
-            <button class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1 xl:w-10 xl:h-10">
+            <a href="javascript:void(0)" class="flex items-center justify-center rounded-full bg-[#009dd9] border-none p-2.5 xl:p-3 translate-x-1 xl:w-10 xl:h-10">
                 <img src="./assets/img/icon-search.png" alt="icon search" class="h-3 w-3.5 xl:h-4 xl:w-4.5">
-            </button>
+            </a>
         </div>
         <div class=" ml-3 flex flex-col items-center justify-center xl:hidden bg-[#009dd9] rounded-full "id="humberger" >
             <span></span>
@@ -164,38 +177,42 @@
             </div>
             <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident facilis sint, sunt eligendi magnam iusto accusantium animi ipsum hic sed tempore, nostrum iure aspernatur facere quibusdam, rerum dolorem? Voluptatem, rem?</p>
 
-            <div class="max-w-[1200px] rounded-xl aspect-video mx-auto w-full relative overflow-hidden" id="video-player">
-                <video id="video" class="w-full" >
-                    <source src="./assets/img/video.mp4">
-                </video>
-                <div id="icon-play" class="absolute z-20 left-2.5 bottom-2.5 icon-play inline-block bg-[#ed1a24] p-3 rounded-full"><img class="translate-x-0.5" src="./assets/img/icon-play.png" alt="icon play"></div>
+            <div class="max-w-[1200px] rounded-xl aspect-video mx-auto w-full relative overflow-hidden " >
+                <div class="video-container" id="video-player">
+                    <iframe id="video-iframe" src="about:blank" data-src="https://www.youtube.com/embed/th6vk1C4INQ" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                    <div class="absolute inset-0 bg-[#00000079] z-10 cursor-pointer" id="iframe-thumb">
+                        <img class="w-full object-cover" src="https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-thien-nhien-3d-002.jpg" alt="ảnh thumb">
+                        <div id="icon-play" class="absolute z-20 left-5 bottom-5 icon-play inline-block bg-[#ed1a24] p-3 rounded-full"><img class="translate-x-0.5" src="./assets/img/icon-play.png" alt="icon play"></div>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
         <div class="box-share mt-9 border-t border-b py-3 flex items-center justify-between flex-wrap gap-3 text-[13px] text-[#b2b2b2]">
             <div class="flex items-center gap-1.5">
-                <button class=" px-3 py-1.5 h-6 flex gap-1.5 items-center rounded-sm bg-[#f7f7f7]">
+                <a href="javascipt:void(0)" class=" px-3 py-1.5 h-6 flex gap-1.5 items-center rounded-sm bg-[#f7f7f7]">
                     <img class="w-1.5 h-2.5" src="./assets/img/icon-arrow-pre1.png" alt="icon">
                     Về trang trước
-                </button>
-                <button class=" px-3 py-1.5 h-6 flex gap-1.5 items-center rounded-sm bg-[#f7f7f7]">
+                </a>
+                <a href="javascipt:void(0)" class=" px-3 py-1.5 h-6 flex gap-1.5 items-center rounded-sm bg-[#f7f7f7]">
                     <img class="w-3 h-3" src="./assets/img/icon-email-gray.jpg" alt="icon">
                     Gửi Email
-                </button>
-                <button class=" px-3 py-1.5 h-6 flex gap-1.5 items-center rounded-sm bg-[#f7f7f7]">
+                </a>
+                <a href="javascipt:void(0)" class=" px-3 py-1.5 h-6 flex gap-1.5 items-center rounded-sm bg-[#f7f7f7]">
                     <img class="w-3 h-3" src="./assets/img/icon-print-gray.jpg" alt="icon">
                     In trang
-                </button>
+                </a>
             </div>
 
             <div class="flex items-center gap-1.5">
-                <button class=" pl-1 pr-2 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#028bdc] text-white">
+                <a href="javascipt:void(0)" class=" pl-1 pr-2 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#028bdc] text-white">
                     <img class="w-3 h-3" src="./assets/img/icon-zalo-blue.jpg" alt="icon">
                     Zalo
-                </button>
-                <button class=" px-3 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#1877f2] text-white">
+                </a>
+                <a href="javascipt:void(0)" class=" px-3 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#1877f2] text-white">
                     Chia sẻ
-                </button>
+                </a>
             </div>
         </div>
 

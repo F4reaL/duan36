@@ -729,6 +729,10 @@ video {
   inset: -0.25rem;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .-bottom-3 {
   bottom: -0.75rem;
 }
@@ -803,6 +807,14 @@ video {
 
 .top-\[106px\] {
   top: 106px;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.left-5 {
+  left: 1.25rem;
 }
 
 .isolate {
@@ -1163,6 +1175,10 @@ video {
 
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+
+.aspect-\[3\/1\] {
+  aspect-ratio: 3/1;
 }
 
 .h-0\.5 {
@@ -2651,6 +2667,11 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -2683,6 +2704,14 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0000002d\] {
+  background-color: #0000002d;
+}
+
+.bg-\[\#00000079\] {
+  background-color: #00000079;
 }
 
 .bg-custom-gradient {
@@ -3264,11 +3293,6 @@ video {
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
-.text-\[\#68a3f0\] {
-  --tw-text-opacity: 1;
-  color: rgb(104 163 240 / var(--tw-text-opacity));
-}
-
 .text-\[\#afafaf\] {
   --tw-text-opacity: 1;
   color: rgb(175 175 175 / var(--tw-text-opacity));
@@ -3307,41 +3331,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#61dbfa\] {
-  --tw-text-opacity: 1;
-  color: rgb(97 219 250 / var(--tw-text-opacity));
-}
-
-.text-\[\#35a0bb\] {
-  --tw-text-opacity: 1;
-  color: rgb(53 160 187 / var(--tw-text-opacity));
-}
-
-.text-\[\#2c9ab6\] {
-  --tw-text-opacity: 1;
-  color: rgb(44 154 182 / var(--tw-text-opacity));
-}
-
-.text-\[\#36f7f7\] {
-  --tw-text-opacity: 1;
-  color: rgb(54 247 247 / var(--tw-text-opacity));
-}
-
-.text-\[\#219999\] {
-  --tw-text-opacity: 1;
-  color: rgb(33 153 153 / var(--tw-text-opacity));
-}
-
-.text-\[\#2a6cb8\] {
-  --tw-text-opacity: 1;
-  color: rgb(42 108 184 / var(--tw-text-opacity));
-}
-
-.text-\[\#2C6FFF\] {
-  --tw-text-opacity: 1;
-  color: rgb(44 111 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -4094,8 +4083,8 @@ video {
     gap: 4rem;
   }
 
-  .xl\:gap-24 {
-    gap: 6rem;
+  .xl\:gap-36 {
+    gap: 9rem;
   }
 
   .xl\:gap-4 {
@@ -4116,14 +4105,6 @@ video {
 
   .xl\:gap-8 {
     gap: 2rem;
-  }
-
-  .xl\:gap-32 {
-    gap: 8rem;
-  }
-
-  .xl\:gap-36 {
-    gap: 9rem;
   }
 
   .xl\:overflow-hidden {

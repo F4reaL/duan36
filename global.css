@@ -12,6 +12,9 @@ input::placeholder {
   color: #000; /* Thay đổi màu placeholder */
   opacity: 1; /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
 }
+.search-box input::placeholder{
+  color: #5f5c5c;
+}
 
 textarea::placeholder {
   color: #000; /* Thay đổi màu placeholder cho textarea nếu cần */
@@ -181,11 +184,6 @@ p {
 }
 
 
-/* Title Blur in article */
-/* xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 */
-.title-blur{
-
-}
 
 /* Header */
 
@@ -733,7 +731,11 @@ p {
   border-radius: 12px;
   overflow: hidden;
 }
-
+.video-detail-page.video-container{
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  max-height: 300px;
+}
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -742,9 +744,6 @@ p {
   height: 100%;
 }
 
-.video-container iframe .ytp-cued-thumbnail-overlay .ytp-large-play-button.ytp-button.ytp-large-play-button-red-bg{
-  display: none;
-}
 
 #custom-pagination {
   text-align: center;
