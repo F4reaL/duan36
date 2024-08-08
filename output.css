@@ -765,12 +765,20 @@ video {
   bottom: 0.625rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .left-0 {
   left: 0px;
 }
 
 .left-2\.5 {
   left: 0.625rem;
+}
+
+.left-5 {
+  left: 1.25rem;
 }
 
 .right-0 {
@@ -807,14 +815,6 @@ video {
 
 .top-\[106px\] {
   top: 106px;
-}
-
-.bottom-5 {
-  bottom: 1.25rem;
-}
-
-.left-5 {
-  left: 1.25rem;
 }
 
 .isolate {
@@ -1048,6 +1048,10 @@ video {
   margin-top: 52px;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1175,10 +1179,6 @@ video {
 
 .aspect-video {
   aspect-ratio: 16 / 9;
-}
-
-.aspect-\[3\/1\] {
-  aspect-ratio: 3/1;
 }
 
 .h-0\.5 {
@@ -1348,6 +1348,10 @@ video {
 
 .max-w-\[624px\] {
   max-width: 624px;
+}
+
+.max-w-\[270px\] {
+  max-width: 270px;
 }
 
 .flex-1 {
@@ -2560,6 +2564,10 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.bg-\[\#00000079\] {
+  background-color: #00000079;
+}
+
 .bg-\[\#008fef\] {
   --tw-bg-opacity: 1;
   background-color: rgb(0 143 239 / var(--tw-bg-opacity));
@@ -2667,11 +2675,6 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -2706,12 +2709,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#0000002d\] {
-  background-color: #0000002d;
-}
-
-.bg-\[\#00000079\] {
-  background-color: #00000079;
+.bg-\[\#48b4e6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(72 180 230 / var(--tw-bg-opacity));
 }
 
 .bg-custom-gradient {
@@ -3043,6 +3043,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3175,6 +3179,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-black {
+  font-weight: 900;
 }
 
 .uppercase {
@@ -4029,6 +4037,10 @@ video {
     max-width: 490px;
   }
 
+  .xl\:max-w-\[270px\] {
+    max-width: 270px;
+  }
+
   .xl\:scale-100 {
     --tw-scale-x: 1;
     --tw-scale-y: 1;
@@ -4225,6 +4237,11 @@ video {
   .xl\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .xl\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .xl\:pb-5 {
