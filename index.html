@@ -66,42 +66,76 @@
 
         })
 
-        const swiperMajor = new Swiper('.swiper-nganhdaotao',{
+        const swiperMajor1 = new Swiper('.swiper-nganhdaotao.swiper-nganhdaotao-1',{
             direction: 'horizontal',
             spaceBetween:20,
+            slidesPerView:2,
+
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-           
-
+            breakpoints: {
+                1024:{
+                    spaceBetween:20,
+                    slidesPerView:4,
+                }
+            }
         })
+        const swiperMajor2 = new Swiper('.swiper-nganhdaotao.swiper-nganhdaotao-2',{
+            direction: 'horizontal',
+            spaceBetween:20,
+            slidesPerView:2,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1024:{
+                    spaceBetween:20,
+                    slidesPerView:4,
+                }
+            }
+        })
+        const swiperMajor3 = new Swiper('.swiper-nganhdaotao.swiper-nganhdaotao-3',{
+            direction: 'horizontal',
+            spaceBetween:20,
+            slidesPerView:2,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1024:{
+                    spaceBetween:20,
+                    slidesPerView:4,
+                }
+            }
+        })
+
+        // Lấy ra danh sách các swiper của ngành đào tạo
+        const nganhdaotaoSwiperList = document.querySelectorAll('.swiper-nganhdaotao')
+        console.log(':::::', nganhdaotaoSwiperList[1]);
         // Gán sự kiện click cho các nút phân trang tùy chỉnh
         var paginationButtons = document.querySelectorAll('#custom-pagination .custom-pagination-button');
         paginationButtons.forEach(function(button) {
             button.addEventListener('click', function() {
-            var slideIndex = parseInt(this.getAttribute('data-slide'), 10);
-            console.log('silde Index:', slideIndex)
-            swiperMajor.slideTo(slideIndex);  // Chuyển đến slide theo chỉ số
-            });
-        });
-
-        // Cập nhật trạng thái của các nút phân trang khi slide thay đổi
-        swiperMajor.on('slideChange', function () {
-            var activeIndex = swiperMajor.activeIndex;
-            console.log('activeIndex Index:', activeIndex)
-
-            paginationButtons.forEach(function(button) {
-            if (parseInt(button.getAttribute('data-slide'), 10) === activeIndex) {
+                paginationButtons.forEach(btn=> btn.classList.remove('active'))
                 button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
+
+                var slideIndex = parseInt(this.getAttribute('data-slide'), 10);
+                for(let i=0;i<nganhdaotaoSwiperList.length;i++){
+                    nganhdaotaoSwiperList[i].style.display="none";
+                }
+                nganhdaotaoSwiperList[slideIndex].style.display="block";  // Chuyển đến slide theo chỉ số
             });
+
+            
         });
 
-        // Kích hoạt trạng thái ban đầu
-        swiperMajor.emit('slideChange');
+        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
@@ -386,11 +420,11 @@
     </section>
 
     <section class=" mt-16 px-4 xl:px-[80px] 2xl:px-[174px] py-8 xl:py-14 bg-custom-gradient">
-        <div class="title uppercase text-[34px] text-center text-[#60a4be] font-bold">Ngành đào tạo</div>
+        <div class="title uppercase text-[34px] text-center text-[#35a0bb] font-bold">Ngành đào tạo</div>
         <div class="mt-2 text-center">Đào tạo nhân lực trình độ cử nhân các khối ngành kinh tế, xã hội, nghiên cứu và ứng dụng khoa học phục vụ giáo dục, đào tạo và phát triển kinh tế - xã hội</div>
         
         <div id="custom-pagination" class=" mt-4 flex justify-center items-center gap-4 xl:gap-24 text-sm xl:text-base font-bold menu-news uppercase relative z-10">
-            <div class="custom-pagination-button" data-slide="0">ĐẠI HỌC</div>
+            <div class="custom-pagination-button active" data-slide="0">ĐẠI HỌC</div>
             <div class="custom-pagination-button" data-slide="1">SAU ĐẠI HỌC</div>
             <div class="custom-pagination-button" data-slide="2">ĐẠI HỌC VLVH</div>
           </div>
@@ -398,63 +432,99 @@
           <div class="swiper-custom relative">
             <div class="swiper-button-prev button-nganhdaotao "><img src="./assets/img/icon-arrow-right-white.png" alt=""></div>
             <div class="swiper-button-next button-nganhdaotao "><img src="./assets/img/icon-arrow-right-white.png" alt=""></div>
-            <div class="swiper-nganhdaotao swiper-custom mt-8 relative z-10 overflow-hidden w-full ">
+            <div class="swiper-nganhdaotao swiper-nganhdaotao-1 swiper-custom mt-8 relative z-10 overflow-hidden w-full ">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide grid grid-cols-2 xl:grid-cols-4 gap-8">
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
-                    </div>
-                    <div class="swiper-slide grid grid-cols-2 xl:grid-cols-4 gap-8">
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI2</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI2</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
-                        <div>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="swiper-nganhdaotao swiper-nganhdaotao-2 swiper-custom mt-8 relative z-10 overflow-hidden w-full hidden">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI2</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI2</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
-                    </div>
-                    <div class="swiper-slide grid grid-cols-2 xl:grid-cols-4 gap-8">
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI3</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI3</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI3</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI3</a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
-                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="swiper-nganhdaotao swiper-nganhdaotao-3 swiper-custom mt-8 relative z-10 overflow-hidden w-full hidden">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
+                        </div>
+                    
+                    
                     
                 </div>
             </div>
