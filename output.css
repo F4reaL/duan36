@@ -817,6 +817,10 @@ video {
   top: 106px;
 }
 
+.top-1 {
+  top: 0.25rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -863,6 +867,10 @@ video {
 
 .z-\[999\] {
   z-index: 999;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .float-start {
@@ -1249,6 +1257,14 @@ video {
   height: 100%;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-\[calc\(100\%-1rem\)\] {
+  height: calc(100% - 1rem);
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -1352,6 +1368,10 @@ video {
 
 .max-w-\[270px\] {
   max-width: 270px;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .flex-1 {
@@ -2020,6 +2040,12 @@ video {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 1;
 }
@@ -2564,6 +2590,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-\[\#d42039\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 32 57 / var(--tw-border-opacity));
+}
+
 .bg-\[\#00000079\] {
   background-color: #00000079;
 }
@@ -2712,6 +2743,15 @@ video {
 .bg-\[\#48b4e6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(72 180 230 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d42039\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 32 57 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.85\)\] {
+  background-color: rgba(0,0,0,0.85);
 }
 
 .bg-custom-gradient {
@@ -3909,6 +3949,14 @@ video {
     top: -3rem;
   }
 
+  .xl\:right-2\.5 {
+    right: 0.625rem;
+  }
+
+  .xl\:top-2\.5 {
+    top: 0.625rem;
+  }
+
   .xl\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -4015,6 +4063,10 @@ video {
 
   .xl\:w-auto {
     width: auto;
+  }
+
+  .xl\:w-\[70px\] {
+    width: 70px;
   }
 
   .xl\:max-w-\[250px\] {
@@ -4272,6 +4324,14 @@ video {
     padding-top: 1rem;
   }
 
+  .xl\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .xl\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
   .xl\:text-start {
     text-align: start;
   }
@@ -4354,6 +4414,11 @@ video {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
   .dark\:hover\:bg-gray-600:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(75 85 99 / var(--tw-bg-opacity));

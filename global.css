@@ -24,6 +24,9 @@ p {
   line-height: 1.4;
   margin-bottom: 24px;
 }
+.triagle-clip-path{
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
 .btn-footer:hover{
   cursor: pointer;
   filter: brightness(1.1);

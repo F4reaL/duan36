@@ -871,7 +871,7 @@
     </div>
 
     <div class="inline-flex w-fit flex-col gap-3 fixed items-end right-5 bottom-2 z-[12]">
-        <a class="btn-footer" href="javascript:void(0)"><img src="./assets/img/icon-hotrotuyendung.png" alt=""></a>
+        <a class="btn-footer" href="javascript:void(0)"><img src="./assets/img/icon-hotrotuyendung.png" alt="" data-modal-target="modal-first-load" data-modal-toggle="modal-first-load"></a>
         <a class="btn-footer" href="javascript:void(0)"><img src="./assets/img/icon-hotrotuyendung.png" alt=""></a>
         <a href="javascript:void(0)" data-modal-target="default-modal" data-modal-toggle="default-modal" class="btn-footer btn-tuvan -translate-x-5 h-[34px] xl:h-auto flex items-center justify-between  uppercase text-sm  rounded-tl-3xl">
             <span class="pl-4">Đăng ký tư vấn tuyển sinh</span>
@@ -881,7 +881,21 @@
     </div>
 
 
-
+    <div id="modal-first-load" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full bg-[rgba(0,0,0,0.85)]">
+        <div class="relative p-4 w-full max-w-xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white border-[3px] border-[#d42039] shadow dark:bg-gray-700">
+                <div data-modal-hide="modal-first-load" class="cursor-pointer absolute top-0 right-0 w-10 h-9 xl:h-[60px] xl:w-[70px] bg-[#d42039] triagle-clip-path flex justify-center items-center"><img class="absolute top-1 right-1 xl:top-2.5 xl:right-2.5" src="./assets/img/icon-close.png" alt=""></div>
+                <!-- Modal body -->
+                <div class="">
+                    <img class="w-full" src="https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-thien-nhien-3d-002.jpg" alt="">
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
   
   <!-- Main modal -->
   <div id="default-modal" tabindex="-1" aria-hidden="true" class="h-full overflow-scroll hidden bg-[rgb(0,0,0,0.1)] fixed top-0 right-0 left-0 z-[99999] justify-center items-center w-full md:inset-0 max-h-full">
