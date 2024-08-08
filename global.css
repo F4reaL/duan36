@@ -184,7 +184,7 @@ p {
 /* Title Blur in article */
 /* xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 */
 .title-blur{
-  
+
 }
 
 /* Header */
@@ -391,6 +391,7 @@ p {
   top: 0;
   left: 0;
   background: transparent;
+  z-index: -1;
 }
 
 .has-submenu:hover {
