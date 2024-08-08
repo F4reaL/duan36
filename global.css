@@ -352,7 +352,7 @@ p {
   position: relative;
 }
 
-.mega-menu li.active::after {
+.mega-menu > li.active::after {
   position: absolute;
   content: "";
   background: #ed1b24;
