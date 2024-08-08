@@ -180,6 +180,13 @@ p {
   width: 100%;
 }
 
+
+/* Title Blur in article */
+/* xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 */
+.title-blur{
+  
+}
+
 /* Header */
 
 .item-border-left {
