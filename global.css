@@ -365,6 +365,9 @@ p {
   display: flex;
   padding: 20px;
 }
+.mb-sidebar ol li{
+  padding: 4px 0;
+}
 
 /* Mega menu */
 .mega-menu li {
