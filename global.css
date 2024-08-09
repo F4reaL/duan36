@@ -362,7 +362,7 @@ p {
 
 .mb-sidebar.open {
   left: 0;
-  display: flex;
+  display: block;
   padding: 20px;
 }
 .mb-sidebar ol li{
