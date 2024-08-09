@@ -218,14 +218,21 @@
         })
        
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('object');
+                document.getElementById('modal-first-load').classList.replace('hidden','flex');
+                console.log(document.getElementById('modal-first-load'));
+        });
+    </script>
     <script src="./main.js"></script>
 </head>
 <body>
     <header class="sticky z-[1000] w-full top-0 bg-white px-2 xl:px-[80px] 2xl:px-[174px] flex items-center justify-between ">
         <div class="flex gap-5 items-center ">
-            <div class="w-[90px] h-20 relative scale-[1.35] translate-y-5">
+            <div class="w-[90px] h-20 relative translate-y-0 scale-[90%]">
                 <a href="#" class="  ">
-                    <img src="./assets/img/logo-header.jpg" alt="Trường đại học lao động - xã hội">
+                    <img src="./assets/img/logo.png" alt="Trường đại học lao động - xã hội">
                 </a>
             </div>
             
@@ -257,8 +264,9 @@
 
     </header>
 
-    <nav class="sticky z-[999] w-full top-20 px-4 xl:px-[80px] 2xl:px-[174px] py-4 bg-[#009dd9]">
-        <ol class="hidden xl:flex ml-[120px] mega-menu  items-center justify-between ">
+    <nav class="sticky z-[999] w-full top-20 px-4 xl:px-[80px] 2xl:px-[174px] py-5 xl:py-4 bg-[#009dd9]">
+        <div class="absolute -top-0.5 -left-6 xl:left-12 2xl:left-[140px] "><img class="w-full xl:scale-125" src="./assets/img/img-wave.jpg" alt=""></div>
+        <ol class="hidden xl:flex ml-[120px] mega-menu  items-center justify-between relative">
             <li><a href="">Trang chủ</a></li>
             <li class="active has-submenu">
                 <a href="">Giới thiệu</a>
@@ -361,26 +369,26 @@
     <div class="xl:mt-3 flex flex-wrap xl:gap-4 items-center justify-center text-white">
         <div class="w-full xl:w-auto xl:h-[60px] pl-6 pr-4 py-2 xl:py-0 lg:px-14 2xl:px-24 xl:rounded-[60px] flex bg-[#f44e55] items-center gap-2">
             <img class="w-8 xl:w-auto shrink-0" src="./assets/img/icon-giangvien.png" alt="icon giang vien">
-            <div>
+            <a href="">
                 <div class="font-bold xl:text-lg uppercase">Giảng viên, viên chức</div>
                 <div class="text-sm xl:text-base">Chuyên môn, Trách nhiệm, Tâm huyết</div>
-            </div>
+            </a>
         </div>
         <div class="w-full xl:w-auto xl:h-[60px] pl-6 pr-4 py-2 xl:py-0 lg:px-14 2xl:px-24 xl:rounded-[60px] flex bg-[#f44e55] items-center gap-2 relative">
             <div class="hidden xl:flex absolute -left-[33px] w-[50px] h-[50px] rounded-full bg-[#f44e55] border-4 border-white justify-center items-center"><img src="./assets/img/icon-arrow-right-white2.png"  alt="icon"></div>
             <img class="w-8 xl:w-auto shrink-0" src="./assets/img/icon-hocsinh.png" alt="icon giang vien">
-            <div>
+            <a href="">
                 <div class="font-bold xl:text-lg uppercase">Học viên, sinh viên</div>
                 <div class="text-sm xl:text-base">Năng động, Sáng tạo, Nhiệt huyết</div>
-            </div>  
+            </a>  
         </div>
         <div class="w-full xl:w-auto xl:h-[60px] pl-6 pr-4 py-2 xl:py-0 lg:px-14 2xl:px-24 xl:rounded-[60px] flex bg-[#f44e55] items-center gap-2 relative">
             <div class="hidden xl:flex absolute -left-[33px] w-[50px] h-[50px] rounded-full bg-[#f44e55] border-4 border-white justify-center items-center"><img src="./assets/img/icon-arrow-right-white2.png"  alt="icon"></div>
             <img class="w-8 xl:w-auto shrink-0" src="./assets/img/icon-cuuhocsinh.png" alt="icon giang vien">
-            <div>
+            <a href="">
                 <div class="font-bold xl:text-lg uppercase">Cựu sinh viên</div>
                 <div class="text-sm xl:text-base">Tự tin, Thành đạt, Thành công</div>
-            </div>
+            </a>
         </div>
     </div>
 
@@ -404,7 +412,7 @@
             
             <div class="flex-1">
                 <div class="aspect-video xl:max-w-[300px] w-full mx-auto rounded-xl overflow-hidden mb-4">
-                    <img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474077CLI/4k-wallpaper_105906912.jpg" alt="anh" class="w-full object-contain">
+                    <img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474077CLI/4k-wallpaper_105906912.jpg" alt="anh" class="w-full h-full object-cover">
                 </div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio at architecto necessitatibus tempore fuga dolor perferendis ad, labore nesciunt incidunt, illum facilis ipsum consequuntur cumque et explicabo molestias recusandae totam.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio at architecto necessitatibus tempore fuga dolor perferendis ad, labore nesciunt incidunt, illum facilis ipsum consequuntur cumque et explicabo molestias recusandae totam.</p>
@@ -436,27 +444,27 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://i.pinimg.com/564x/62/ed/6e/62ed6ea71018a57a3ab0c8c959d78cb0.jpg" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI1</a>
                         </div>
                     
@@ -468,27 +476,27 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 2</a>
                         </div>
                     
@@ -500,27 +508,27 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="" class="block w-full aspect-[3/2]"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                            <a href="" class="block w-full aspect-[3/2] overflow-hidden rounded-xl"><img class="w-full object-contain rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
                             <a href="" class="mt-2 text-center font-bold xl:text-lg hover:text-[#00a9ef]">CÔNG TÁC XÃ HỘI 3</a>
                         </div>
                     
@@ -539,26 +547,26 @@
         <div class="mt-7 flex flex-col-reverse xl:grid xl:grid-cols-2 gap-5 xl:gap-8 xl:text-white font-semibold">
             <div class="grid grid-cols-2 grid-rows-2 gap-5 xl:gap-8">
                 <div class="relative w-full aspect-[3/2] xl:overflow-hidden rounded-xl">
-                    <a href="" ><img class="w-full object-contain " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">Thông báo Tuyển sinh Đăng ký xét học bạ vào Trường Đại học Lao </a>
+                    <a href="" ><img class="w-full h-full object-cover " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">Thông báo Tuyểnc Lao </a>
                 </div>
                 <div class="relative w-full aspect-[3/2] xl:overflow-hidden rounded-xl">
-                    <a href="" ><img class="w-full object-contain " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">Thông báo Tuyển sinh Đăng ký xét học bạ vào Trường Đại học Lao </a>
+                    <a href="" ><img class="w-full h-full object-cover " src="https://i.pinimg.com/736x/93/28/37/9328376b1fea44000aa804a92d79ff53.jpg" alt=""></a>
+                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">helo</a>
                 </div>
                 <div class="relative w-full aspect-[3/2] xl:overflow-hidden rounded-xl">
-                    <a href="" ><img class="w-full object-contain " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">Thông báo Tuyển sinh Đăng ký xét học bạ vào Trường Đại học Lao </a>
+                    <a href="" ><img class="w-full h-full object-cover " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">helo</a>
                 </div>
                 <div class="relative w-full aspect-[3/2] xl:overflow-hidden rounded-xl">
-                    <a href="" ><img class="w-full object-contain " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">Thông báo Tuyển sinh Đăng ký xét học bạ vào Trường Đại học Lao </a>
+                    <a href="" ><img class="w-full h-full object-cover " src="https://i.pinimg.com/736x/3e/e1/28/3ee128987bbc6cc9524c7cea1033b21e.jpg" alt=""></a>
+                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-3.5 xl:py-1.5 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">helo</a>
                 </div>
             </div>
             <div>
                 <div class="relative w-full aspect-[3/2] xl:h-full xl:aspect-auto xl:overflow-hidden rounded-xl">
-                    <a href="" ><img class="w-full object-contain " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
-                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-5 xl:py-3 xl:bg-black-to-blur block mt-1.5 xl:mt-0">Thông báo tuyển sinh Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea pariatur earum, hic dolor quod rem quibusdam nesciunt labore doloremque maxime possimus quasi dolorum, molestias consequuntur suscipit sunt, perferendis autem accusantium.</a>
+                    <a href="" ><img class="w-full h-full object-cover " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Aspect-ratio-3x2.svg/2560px-Aspect-ratio-3x2.svg.png" alt=""></a>
+                    <a href="" class="xl:absolute left-0 bottom-0 xl:px-5 xl:py-3 xl:bg-black-to-blur block mt-1.5 xl:mt-0 w-full">helo</a>
                 </div>
             </div>
         </div>            
@@ -861,9 +869,11 @@
         
         <div class="mt-4">
             <label class="font-bold" for="securityKey">Mã bảo mật *</label>
-            <div class=" w-full  rounded-sm border flex justify-between px-3 gap-4 bg-white">
+            <div class=" w-full  rounded-sm border flex items-center justify-between px-3 gap-2 xl:gap-4 bg-white">
                 <input id="securityKey" name="securityKey" class="w-full h-10 outline-none" type="text" placeholder="Nhập mã bảo mật" required>
                 <div class="shrink-0 w-1/3 h-10 bg-[#e62626]"></div>
+                <div class="shrink-0 cursor-pointer hover:rotate-45 duration-150 ease-linear"><img src="./assets/img/icon-reload.png" alt=""></div>
+
             </div>
         </div>
         
@@ -875,7 +885,7 @@
         <a class="btn-footer" href="javascript:void(0)"><img src="./assets/img/icon-hotrotuyendung.png" alt=""></a>
         <a href="javascript:void(0)" data-modal-target="default-modal" data-modal-toggle="default-modal" class="btn-footer btn-tuvan -translate-x-5 h-[34px] xl:h-auto flex items-center justify-between  uppercase text-sm  rounded-tl-3xl">
             <span class="pl-4">Đăng ký tư vấn tuyển sinh</span>
-            <img class="translate-x-5 relative z-30 scale-75 xl:scale-100"  src="./assets/img/icon-hotrotuyendung.png" alt="" >
+            <img class="translate-x-5 relative z-30 "  src="./assets/img/icon-hotrotuyendung.png" alt="" >
         </a>
 
     </div>
@@ -945,9 +955,10 @@
                 
                 <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="securityKey">Mã bảo mật *</label>
-                    <div class=" w-full  rounded-sm border flex justify-between px-3 gap-4 bg-white">
+                    <div class=" w-full  rounded-sm border flex items-center justify-between xl:px-3 gap-2 xl:gap-4 bg-white">
                         <input id="securityKey" name="securityKey" class="w-full h-10 outline-none" type="text" placeholder="Nhập mã bảo mật" required>
                         <div class="shrink-0 w-1/3 h-10 bg-[#e62626]"></div>
+                        <div class="shrink-0 cursor-pointer hover:rotate-45 duration-150 ease-linear"><img src="./assets/img/icon-reload.png" alt=""></div>
                     </div>
                 </div>
                 
@@ -959,7 +970,7 @@
   
 
     <footer class="mt-8 px-4 xl:px-[80px] 2xl:px-[174px] pt-4 xl:pt-12 bg-[#009dd9] relative overflow-hidden text-white">
-        <img src="./assets/img/bg-footer-left.png" alt="bg footer left" class="absolute left-0 top-0 h-full object-contain">
+        <img src="./assets/img/bg-footer-left.png" alt="bg footer left" class="absolute left-0 bottom-0 h-full object-contain scale-[1.7]">
         <img src="./assets/img/bg-footer-right.png" alt="bg footer left" class="hidden xl:block absolute right-0 top-0 h-full object-contain">
         <div class="flex flex-col xl:flex-row gap-4 xl:gap-7 2xl:gap-10 relative z-10 justify-between">
             <a href="" class="mx-auto"><img src="./assets//img/logo-footer.png" alt="" class="scale-90 xl:scale-100"></a>
@@ -1017,5 +1028,6 @@
         </div>
     </footer>
     
+
 </body>
 </html>
