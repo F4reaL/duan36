@@ -7,37 +7,49 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
+
 /* do not group these rules */
 input::placeholder {
-  color: #000; /* Thay đổi màu placeholder */
-  opacity: 1; /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
+  color: #000;
+  /* Thay đổi màu placeholder */
+  opacity: 1;
+  /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
 }
-.search-box input::placeholder{
+
+.search-box input::placeholder {
   color: #5f5c5c;
 }
 
 textarea::placeholder {
-  color: #000; /* Thay đổi màu placeholder cho textarea nếu cần */
-  opacity: 1; /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
+  color: #000;
+  /* Thay đổi màu placeholder cho textarea nếu cần */
+  opacity: 1;
+  /* Đảm bảo opacity là 1 để màu sắc không bị làm mờ */
 }
+
 p {
   line-height: 1.4;
   margin-bottom: 24px;
 }
-.triagle-clip-path{
+
+.triagle-clip-path {
   clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
-.btn-footer:hover{
+
+.btn-footer:hover {
   cursor: pointer;
   filter: brightness(1.1);
 }
-.btn-tuvan{
+
+.btn-tuvan {
   background: none;
 }
-.btn-tuvan:hover{
+
+.btn-tuvan:hover {
   background: #dc2626;
 }
-.btn-tuvan span{
+
+.btn-tuvan span {
   transition: all 0.1s ease-in;
   width: 0;
   opacity: 0;
@@ -45,18 +57,19 @@ p {
   color: transparent;
   display: none;
 }
-.btn-tuvan:hover span{
+
+.btn-tuvan:hover span {
   width: auto;
   opacity: 1;
   height: auto;
-  color:white;
+  color: white;
   display: block;
 }
 
 /* inline-flex rounded-3xl px-4 py-1.5 -translate-y-5 bg-[#cdf1ff] text-lg text-[#009dd9] items-center gap-2 */
 .button-seemore-1 {
   display: inline-flex;
-  border-radius: 24px ;
+  border-radius: 24px;
   padding: 6px 16px;
   transform: translateY(-20px);
   align-items: center;
@@ -67,8 +80,9 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  
+
 }
+
 .button-seemore-1:after {
   content: '';
   position: absolute;
@@ -80,6 +94,7 @@ p {
   border-radius: 10rem;
   z-index: -2;
 }
+
 .button-seemore-1:before {
   content: '';
   position: absolute;
@@ -92,11 +107,13 @@ p {
   border-radius: 10rem;
   z-index: -1;
 }
+
 .button-seemore-1:hover {
   color: #fff;
-  
+
 }
-.button-seemore-1:hover::before{
+
+.button-seemore-1:hover::before {
   width: 100%;
 }
 
@@ -109,8 +126,9 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  
+
 }
+
 .button-seemore-2:after {
   content: '';
   position: absolute;
@@ -122,6 +140,7 @@ p {
   border-radius: 10rem;
   z-index: -2;
 }
+
 .button-seemore-2:before {
   content: '';
   position: absolute;
@@ -134,11 +153,13 @@ p {
   border-radius: 10rem;
   z-index: -1;
 }
+
 .button-seemore-2:hover {
   color: #fff;
-  
+
 }
-.button-seemore-2:hover::before{
+
+.button-seemore-2:hover::before {
   width: 100%;
 }
 
@@ -152,8 +173,9 @@ p {
   overflow: hidden;
   z-index: 1;
   border: 1px solid white;
-  
+
 }
+
 .button-seemore-3:after {
   content: '';
   position: absolute;
@@ -165,6 +187,7 @@ p {
   border-radius: 10rem;
   z-index: -2;
 }
+
 .button-seemore-3:before {
   content: '';
   position: absolute;
@@ -177,12 +200,14 @@ p {
   border-radius: 10rem;
   z-index: -1;
 }
+
 .button-seemore-3:hover {
   color: #009dd9;
   border: 1px solid #08acec;
-  
+
 }
-.button-seemore-3:hover::before{
+
+.button-seemore-3:hover::before {
   width: 100%;
 }
 
@@ -353,7 +378,7 @@ p {
   position: relative;
 }
 
-.mega-menu > li.active::after {
+.mega-menu>li.active::after {
   position: absolute;
   content: "";
   background: #ed1b24;
@@ -521,6 +546,7 @@ p {
   right: 0;
   top: 13px;
 }
+
 .loimodau-title.home::before {
   top: 9px;
 }
@@ -582,7 +608,8 @@ p {
   text-transform: uppercase;
 }
 
-.menu-news .menu-news-item.active, .menu-news .menu-news-item:hover {
+.menu-news .menu-news-item.active,
+.menu-news .menu-news-item:hover {
   border-bottom: 2px solid #ed1b24;
   color: #ed1b24;
 }
@@ -648,6 +675,7 @@ p {
 .swiper-custom .swiper-button-prev {
   transform: rotate(180deg);
 }
+
 .swiper-button-next.button-sponsor,
 .swiper-button-prev.button-sponsor {
   z-index: 20;
@@ -680,10 +708,12 @@ p {
 }
 
 @media (max-width: 1280px) {
+
   .swiper-button-next.button-nganhdaotao,
   .swiper-button-prev.button-nganhdaotao {
     display: none;
   }
+
   .swiper-button-next.button-nganhdaotao.sukien,
   .swiper-button-prev.button-nganhdaotao.sukien {
     display: flex;
@@ -714,6 +744,7 @@ p {
   .swiper-button-next.button-nganhdaotao {
     right: -50px;
   }
+
   .swiper-button-prev.button-sponsor {
     left: -60px;
 
@@ -728,17 +759,20 @@ p {
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Tỷ lệ khung hình 16:9 */
+  padding-bottom: 56.25%;
+  /* Tỷ lệ khung hình 16:9 */
   height: 0;
   overflow: hidden;
   border-radius: 12px;
   overflow: hidden;
 }
-.video-detail-page.video-container{
+
+.video-detail-page.video-container {
   aspect-ratio: 16/9;
   overflow: hidden;
   max-height: 300px;
 }
+
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -761,7 +795,8 @@ p {
 
 
 
-.custom-pagination-button.active , .custom-pagination-button:hover {
+.custom-pagination-button.active,
+.custom-pagination-button:hover {
   border-bottom: 3px solid #ed1b24;
   color: #ed1b24;
 }
@@ -818,54 +853,103 @@ p {
 
 
 /* Trang hỏi đáp */
-.question-item{
+.question-item {
   transition: all 0.2s ease-in-out;
   box-shadow: 1px 1px 4px 1px rgb(235, 234, 234);
 
 }
-.question-item:first-child{
+
+.question-item:first-child {
   border: 1px solid #ffbbbe;
 }
-.question-item:nth-child(even){
+
+.question-item:nth-child(even) {
   background: #e7f8ff;
-  border:1px solid white;
+  border: 1px solid white;
 }
-.question-item:hover{
+
+.question-item:hover {
   box-shadow: 1px 1px 4px 2px rgb(230, 228, 228);
   transform: translateX(-1px) translateY(-1px);
 }
-.question-title{
+
+.question-title {
   font-weight: 700;
   margin-top: 20px;
 }
-.question-item:first-child .question-title{
-  color:#ed1b24
+
+.question-item:first-child .question-title {
+  color: #ed1b24
 }
-.question-content{
+
+.question-content {
   margin-top: 20px;
 }
-.question-seemore{
+
+.question-seemore {
   color: #009dd9;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   cursor: pointer;
 }
-.question-seemore .icon-arrow{
+
+.question-seemore .icon-arrow {
   width: 6px;
   height: 9px;
   background: url(./assets/img/icon-arrow-right-blue.png);
 }
-.question-item:first-child .question-seemore{
-  color:#ed1b24
+
+.question-item:first-child .question-seemore {
+  color: #ed1b24
 }
-.question-item:first-child .question-seemore .icon-arrow{
+
+.question-item:first-child .question-seemore .icon-arrow {
   background: url(./assets/img/icon-arrow-right-red.png);
 
 }
 
 /* Trang cảm ơn */
-.thankyou{
+.thankyou {
   height: calc(100vh - 134px);
   overflow: hidden;
+}
+
+
+/* Phân trang */
+/* flex items-center  gap-2 flex-wrap */
+.paging.SplitPages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* border w-8 h-8 flex justify-center items-center hover:text-white hover:bg-[#009dd9] */
+.paging.SplitPages a{
+  border:1px solid rgb(223, 222, 222);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.paging.SplitPages a:hover,.paging.SplitPages a.hientai{
+  color: white;
+  background: #009dd9;
+  filter: brightness(0.9);
+}
+.paging.SplitPages a.dau{
+  background: url(./assets/img/icon-arrow-pre2.png) no-repeat center;
+}
+.paging.SplitPages a.truoc{
+  background: url(./assets/img/icon-arrow-pre1.png) no-repeat center;
+}
+.paging.SplitPages a.sau{
+  background: url(./assets/img/icon-arrow-pre1.png) no-repeat center;
+  transform: rotate(180deg);
+}
+.paging.SplitPages a.cuoi{
+  background: url(./assets/img/icon-arrow-pre2.png) no-repeat center;
+  transform: rotate(180deg);
 }
