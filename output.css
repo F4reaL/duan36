@@ -733,10 +733,6 @@ video {
   inset: 0px;
 }
 
-.-bottom-3 {
-  bottom: -0.75rem;
-}
-
 .-left-3 {
   left: -0.75rem;
 }
@@ -1366,16 +1362,16 @@ video {
   max-width: 400px;
 }
 
-.max-w-\[624px\] {
-  max-width: 624px;
-}
-
 .max-w-\[68px\] {
   max-width: 68px;
 }
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-\[560px\] {
+  max-width: 560px;
 }
 
 .flex-1 {
@@ -3950,10 +3946,6 @@ video {
     position: absolute;
   }
 
-  .xl\:-bottom-0 {
-    bottom: -0px;
-  }
-
   .xl\:-top-12 {
     top: -3rem;
   }
@@ -4094,6 +4086,10 @@ video {
     max-width: 270px;
   }
 
+  .xl\:max-w-\[300px\] {
+    max-width: 300px;
+  }
+
   .xl\:max-w-\[330px\] {
     max-width: 330px;
   }
@@ -4104,10 +4100,6 @@ video {
 
   .xl\:max-w-\[490px\] {
     max-width: 490px;
-  }
-
-  .xl\:max-w-\[300px\] {
-    max-width: 300px;
   }
 
   .xl\:translate-x-0 {
@@ -4147,10 +4139,6 @@ video {
 
   .xl\:grid-cols-news-list-3 {
     grid-template-columns: 1fr minmax(754px, 1fr) 1fr;
-  }
-
-  .xl\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .xl\:flex-row {
@@ -4416,12 +4404,12 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:left-\[140px\] {
-    left: 140px;
-  }
-
   .\32xl\:-bottom-0 {
     bottom: -0px;
+  }
+
+  .\32xl\:left-\[140px\] {
+    left: 140px;
   }
 
   .\32xl\:top-auto {
@@ -4433,16 +4421,16 @@ video {
     margin-right: 174px;
   }
 
-  .\32xl\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .\32xl\:w-\[500px\] {
     width: 500px;
   }
 
   .\32xl\:max-w-\[400px\] {
     max-width: 400px;
+  }
+
+  .\32xl\:max-w-\[624px\] {
+    max-width: 624px;
   }
 
   .\32xl\:grid-cols-1 {
