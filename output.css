@@ -4106,6 +4106,10 @@ video {
     max-width: 490px;
   }
 
+  .xl\:max-w-\[300px\] {
+    max-width: 300px;
+  }
+
   .xl\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4429,8 +4433,16 @@ video {
     margin-right: 174px;
   }
 
+  .\32xl\:mt-12 {
+    margin-top: 3rem;
+  }
+
   .\32xl\:w-\[500px\] {
     width: 500px;
+  }
+
+  .\32xl\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .\32xl\:grid-cols-1 {
