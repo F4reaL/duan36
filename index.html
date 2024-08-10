@@ -220,9 +220,7 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('object');
                 document.getElementById('modal-first-load').classList.replace('hidden','flex');
-                console.log(document.getElementById('modal-first-load'));
         });
     </script>
     <script src="./main.js"></script>
@@ -836,49 +834,7 @@
     </section>
 
 
-    <div class="hidden bg-white border-4 border-red-600 rounded-xl p-6 fixed -bottom-3 right-6 z-[100] w-full max-w-[400px]">
-        <div class="uppercase text-center font-semibold text-red-600">Chi tiết thông tin tuyển sinh</div>
-        <div class="mt-4">
-            <label class="font-bold" for="name">Họ và tên *</label>
-            <input id="name" name="name" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="Nguyễn Văn A" required>
-        </div>
-        <div class="mt-4">
-            <label class="font-bold" for="email">Email *</label>
-            <input id="email" name="email" class=" h-10 border rounded-sm p-3 w-full outline-none" type="email" placeholder="Example@gmail.com" required>
-        </div>
-        <div class="mt-4">
-            <label class="font-bold" for="phoneNumber">Số điện thoại *</label>
-            <input id="phoneNumber" name="phoneNumber" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="0125464885" required>
-        </div>
-        <div class="mt-4">
-            <label class="font-bold" for="optionMajor">Ngành nghề quan tâm </label>
-            <select id="optionMajor" name="optionMajor" class=" h-10 border rounded-sm px-3 w-full outline-none">
-                <option value="1">Công nghệ thông tin</option>
-                <option value="2">Kế toán</option>
-                <option value="3">Ngân hàng</option>
-            </select>
-        </div>
-       
-        
-        <div class="mt-4">
-            <label class="font-bold" for="supportinfo">Thông tin cần tư vấn *</label>
-            <div class="overflow-hidden mt-2 w-full rounded-sm border flex gap-2 bg-white">
-                <div class="py-3 w-full px-2"><textarea name="supportinfo" id="supportinfo" class=" w-full outline-none" placeholder="Nội dung câu hỏi " rows="4"></textarea></div>
-            </div>
-        </div>
-        
-        <div class="mt-4">
-            <label class="font-bold" for="securityKey">Mã bảo mật *</label>
-            <div class=" w-full  rounded-sm border flex items-center justify-between px-3 gap-2 xl:gap-4 bg-white">
-                <input id="securityKey" name="securityKey" class="w-full h-10 outline-none" type="text" placeholder="Nhập mã bảo mật" required>
-                <div class="shrink-0 w-1/3 h-10 flex items-center"></div>
-                <div class="shrink-0 cursor-pointer hover:rotate-45 duration-150 ease-linear"><img src="./assets/img/icon-reload.png" alt=""></div>
-
-            </div>
-        </div>
-        
-        <a href="" class="my-5 block py-2 rounded-xs   bg-[#e62626] text-center text-white font-bold text-lg">Gửi yêu cầu </a>
-    </div>
+    
 
     <div class="inline-flex w-fit flex-col gap-3 fixed items-end right-5 bottom-2 z-[12]">
         <a class="btn-footer" href="javascript:void(0)"><img src="./assets/img/icon-hotrotuyendung.png" alt="" data-modal-target="modal-first-load" data-modal-toggle="modal-first-load"></a>
@@ -910,7 +866,7 @@
   <!-- Main modal -->
   <div id="default-modal" tabindex="-1" aria-hidden="true" class="h-full overflow-scroll hidden bg-[rgb(0,0,0,0.1)] fixed top-0 right-0 left-0 z-[99999] justify-center items-center w-full md:inset-0 max-h-full">
           <!-- Modal content -->
-          <div class="xl:absolute xl:-bottom-0 right-6 z-[100] p-4 xl:p-0">
+          <div class="xl:absolute xl:top-20 2xl:top-auto 2xl:-bottom-0 right-6 z-[100] p-4 xl:p-0">
             
             <div class="w-full max-w-[400px] bg-white border-4 border-red-600 rounded-xl p-6 pb-0 relative z-20">
                 <div class="h-[34px] xl:h-auto flex items-center justify-between bg-red-600 uppercase text-white absolute -top-9 xl:-top-12 right-3 text-sm pl-6 rounded-tl-3xl">
@@ -924,31 +880,34 @@
                     <span class="sr-only">Close modal</span>
                 </div>
                 <div class="mt-2 xl:mt-0 uppercase text-center font-semibold text-red-600">Chi tiết thông tin tuyển sinh</div>
-                <div class="mt-2 xl:mt-4">
-                    <label class="font-bold" for="name">Họ và tên *</label>
-                    <input id="name" name="name" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="Nguyễn Văn A" required>
+                <div class="mt-4 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-1 gap-2 xl:gap-y-4">
+                    <div class="">
+                        <label class="font-bold" for="name">Họ và tên *</label>
+                        <input id="name" name="name" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="Nguyễn Văn A" required>
+                    </div>
+                    <div class="">
+                        <label class="font-bold" for="email">Email *</label>
+                        <input id="email" name="email" class=" h-10 border rounded-sm p-3 w-full outline-none" type="email" placeholder="Example@gmail.com" required>
+                    </div>
+                    <div class="">
+                        <label class="font-bold" for="phoneNumber">Số điện thoại *</label>
+                        <input id="phoneNumber" name="phoneNumber" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="0125464885" required>
+                    </div>
+                    <div class="">
+                        <label class="font-bold" for="optionMajor">Ngành nghề quan tâm </label>
+                        <select id="optionMajor" name="optionMajor" class=" h-10 border rounded-sm px-3 w-full outline-none">
+                            <option value="1">Công nghệ thông tin</option>
+                            <option value="2">Kế toán</option>
+                            <option value="3">Ngân hàng</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="mt-2 xl:mt-4">
-                    <label class="font-bold" for="email">Email *</label>
-                    <input id="email" name="email" class=" h-10 border rounded-sm p-3 w-full outline-none" type="email" placeholder="Example@gmail.com" required>
-                </div>
-                <div class="mt-2 xl:mt-4">
-                    <label class="font-bold" for="phoneNumber">Số điện thoại *</label>
-                    <input id="phoneNumber" name="phoneNumber" class=" h-10 border rounded-sm p-3 w-full outline-none" type="text" placeholder="0125464885" required>
-                </div>
-                <div class="mt-2 xl:mt-4">
-                    <label class="font-bold" for="optionMajor">Ngành nghề quan tâm </label>
-                    <select id="optionMajor" name="optionMajor" class=" h-10 border rounded-sm px-3 w-full outline-none">
-                        <option value="1">Công nghệ thông tin</option>
-                        <option value="2">Kế toán</option>
-                        <option value="3">Ngân hàng</option>
-                    </select>
-                </div>
+                
                
                 
                 <div class="mt-2 xl:mt-4">
                     <label class="font-bold" for="supportinfo">Thông tin cần tư vấn *</label>
-                    <div class="overflow-hidden mt-2 w-full rounded-sm border flex gap-2 bg-white">
+                    <div class="overflow-hidden w-full rounded-sm border flex gap-2 bg-white">
                         <div class="py-3 w-full px-2"><textarea name="supportinfo" id="supportinfo" class=" w-full !outline-none border-none" placeholder="Nội dung câu hỏi " rows="3"></textarea></div>
                     </div>
                 </div>
