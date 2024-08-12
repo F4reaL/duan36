@@ -357,7 +357,7 @@ p {
   /* display: none; */
   left: 200vw;
   position: fixed;
-  top: 112px;
+  top: 120px;
   width: 100vw;
   background: #009dd9;
   height: 100vh;
@@ -381,6 +381,7 @@ p {
   font-size: 15px;
   font-weight: 700;
 }
+
 
 .mega-menu li.active {
   position: relative;
@@ -440,6 +441,7 @@ p {
 .has-submenu img {
   height: 6px;
   width: 10px;
+  transform: translateY(-1px);
 }
 
 .sub-menu li {
@@ -504,6 +506,15 @@ p {
 .sub-menu li:hover>.icon-menu-arrow,
 .sub-menu-lv2 li:hover>.icon-menu-arrow {
   background: url("./assets/img/icon-arrow-right-white.png") 100% no-repeat;
+}
+
+@media (max-width: 1580px) {
+  .mega-menu li {
+    font-size: 14px;
+  }
+  .has-submenu {
+    gap: 6px;
+  }
 }
 
 /* Breadscrum */
@@ -642,6 +653,14 @@ p {
 }
 
 /* Custom SWiper */
+
+.swiper-sukien .swiper-slide{
+  height: auto;
+}
+.swiper-sukien .swiper-slide > div{
+  height: 100%;
+}
+
 .swiper-news .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   justify-content: end;
@@ -980,7 +999,7 @@ p {
 }
 
 .swiper-ads .swiper-slide{
-  max-height: calc(100vh - 134px) ;
+  max-height: calc(100vh - 244px) ;
   overflow: hidden;
 }
 /* aspect-video xl:max-w-[300px] w-full mx-auto rounded-xl overflow-hidden mb-4 */
