@@ -1479,6 +1479,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-0\.5 {
+  --tw-translate-y: 0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-1 {
   --tw-translate-y: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1501,11 +1506,6 @@ video {
 
 .translate-y-7 {
   --tw-translate-y: 1.75rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-0\.5 {
-  --tw-translate-y: 0.125rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2504,20 +2504,16 @@ video {
   border-width: 4px;
 }
 
-.border-\[2px\] {
-  border-width: 2px;
-}
-
 .border-\[3px\] {
   border-width: 3px;
 }
 
-.border-\[6px\] {
-  border-width: 6px;
-}
-
 .border-\[4px\] {
   border-width: 4px;
+}
+
+.border-\[6px\] {
+  border-width: 6px;
 }
 
 .border-x {
@@ -2662,11 +2658,6 @@ video {
 .bg-\[\#028bdc\] {
   --tw-bg-opacity: 1;
   background-color: rgb(2 139 220 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#1877f2\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 119 242 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#25beec41\] {
@@ -4210,6 +4201,10 @@ video {
     gap: 2.5rem;
   }
 
+  .xl\:gap-12 {
+    gap: 3rem;
+  }
+
   .xl\:gap-16 {
     gap: 4rem;
   }
@@ -4236,10 +4231,6 @@ video {
 
   .xl\:gap-8 {
     gap: 2rem;
-  }
-
-  .xl\:gap-12 {
-    gap: 3rem;
   }
 
   .xl\:gap-y-4 {
@@ -4289,11 +4280,6 @@ video {
 
   .xl\:p-3 {
     padding: 0.75rem;
-  }
-
-  .xl\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 
   .xl\:px-20 {
@@ -4376,11 +4362,6 @@ video {
     padding-bottom: 2rem;
   }
 
-  .xl\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .xl\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -4391,6 +4372,10 @@ video {
 
   .xl\:pl-6 {
     padding-left: 1.5rem;
+  }
+
+  .xl\:pr-8 {
+    padding-right: 2rem;
   }
 
   .xl\:pt-12 {
@@ -4407,10 +4392,6 @@ video {
 
   .xl\:pt-4 {
     padding-top: 1rem;
-  }
-
-  .xl\:pr-8 {
-    padding-right: 2rem;
   }
 
   .xl\:text-start {
