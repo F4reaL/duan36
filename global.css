@@ -35,6 +35,9 @@ p {
 .triagle-clip-path {
   clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
+.first-modal-clip-path{
+  clip-path: polygon(85% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+}
 
 .btn-footer:hover {
   cursor: pointer;
@@ -800,7 +803,6 @@ p {
 
 #custom-pagination {
   text-align: center;
-  margin-top: 10px;
 }
 
 .custom-pagination-button {
@@ -1002,17 +1004,30 @@ p {
 }
 @media (min-width:1280px) {
   .noidung-khampha blockquote img{
-    max-width: 300px;
+    max-width: 250px;
   }
 }
-.khoiChinhSua a{
+@media (min-width:1800px) {
+  .noidung-khampha blockquote img{
+    max-width: 450px;
+  }
+}
+.anhMaps a{
   display: block;
   overflow: hidden;
   aspect-ratio: 16/9;
   border-radius: 8px;
 }
-.khoiChinhSua a img{
+.anhMaps a img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width:1280px) {
+  .anhMaps a{
+   aspect-ratio: 3/2;
+  }
+}
+.sumenhcuatruong em{
+  color: #009dd9;
 }

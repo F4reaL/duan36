@@ -6,6 +6,8 @@
     <title>10</title>
     <link href="./output.css" rel="stylesheet">
     <link href="./global.css" rel="stylesheet">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v20.0" nonce="XHkw4kjC"></script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const videoPlayer = document.getElementById('video-player')
@@ -206,13 +208,14 @@
             </div>
 
             <div class="flex items-center gap-1.5">
-                <a href="javascipt:void(0)" class=" pl-1 pr-2 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#028bdc] text-white">
-                    <img class="w-3 h-3" src="./assets/img/icon-zalo-blue.jpg" alt="icon">
-                    Zalo
-                </a>
-                <a href="javascipt:void(0)" class=" px-3 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#1877f2] text-white">
-                    Chia sẻ
-                </a>
+                <div data-href="https://zalo.me/share?link=https://www.google.com/" data-oaid=""
+                    target="_blank" class="zalo-share-button pl-1 pr-2 py-1.5 h-5 flex gap-1.5 items-center rounded-sm bg-[#028bdc] text-white">
+                        <img class="w-3 h-3" src="./assets/img/icon-zalo-blue.jpg" alt="icon">
+                        Zalo
+                    </div>
+                    <div class="fb-share-button" data-href="" data-layout="button" data-size="">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a>
+                    </div>
             </div>
         </div>
 
