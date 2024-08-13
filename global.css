@@ -41,24 +41,14 @@ p {
   filter: brightness(1.1);
 }
 
-.btn-tuvan {
+/* .btn-tuvan {
   background: none;
-}
+} */
 
-.btn-tuvan:hover {
+.btn-tuvan {
   background: #dc2626;
 }
-
 .btn-tuvan span {
-  transition: all 0.1s ease-in;
-  width: 0;
-  opacity: 0;
-  height: 0;
-  color: transparent;
-  display: none;
-}
-
-.btn-tuvan:hover span {
   width: auto;
   opacity: 1;
   height: auto;
